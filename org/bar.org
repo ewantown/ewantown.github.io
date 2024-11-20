@@ -1,0 +1,3 @@
+* this is bar
++ link to sitemap: [[./sitemap.org][sitemap]]
++ link to foo: [[./foo.org][foo]]
