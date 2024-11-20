@@ -1,3 +1,5 @@
+#+title: Foo
+#+author: Ewan
 * this is foo
 + link to sitemap: [[./sitemap.org][sitemap]]
 + link to bar: [[./bar.org][bar]]
