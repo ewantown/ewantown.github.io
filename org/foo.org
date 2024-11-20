@@ -3,3 +3,9 @@
 * this is foo
 + link to sitemap: [[./sitemap.org][sitemap]]
 + link to bar: [[./bar.org][bar]]
+* this is a code snippet
+here are some words about it
+#+begin_src emacs-lisp
+  (defun foo (bar)
+    (+ bar 1))
+#+end_src
