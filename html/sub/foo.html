@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap</title>
+<title>Foo</title>
 <meta name="generator" content="Org Mode" />
 <style type='text/css'>
 <!--/*--><![CDATA[/*><!--*/
@@ -529,6 +529,38 @@ img {
 }
 /*]]>*/-->
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -549,14 +581,62 @@ img {
 </div><div id='view-controls'><div id='toggle-theme'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
 </div>
 <div id="content" class="content">
-<h1 class="title">Sitemap</h1>
+<h1 class="title">Foo</h1>
+<div id="outline-container-org4f843a5" class="outline-2">
+<h2 id="org4f843a5">this is foo</h2>
+<div class="outline-text-2" id="text-org4f843a5">
 <ul class="org-ul">
-<li>sub
-<ul class="org-ul">
-<li><a href="sub/foo.html">Foo</a></li>
-<li><a href="sub/bar.html">bar</a></li>
-</ul></li>
+<li>link to sitemap: <a href="./sitemap.html">sitemap</a></li>
+<li>link to bar: <a href="./bar.html">bar</a></li>
 </ul>
+</div>
+</div>
+<div id="outline-container-org4cd4bfc" class="outline-2">
+<h2 id="org4cd4bfc">this is a code snippet</h2>
+<div class="outline-text-2" id="text-org4cd4bfc">
+<p>
+here are some words about it
+</p>
+<div class='org-src-wrapper'>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: var(--clr-keyword); background-color: var(--bg-keyword);">defun</span> <span style="color: var(--function-clr-name); background-color: var(--function-bg-name);">foo</span> (bar)
+  (+ bar 1))
+(<span style="color: var(--clr-keyword); background-color: var(--bg-keyword);">defun</span> <span style="color: var(--function-clr-name); background-color: var(--function-bg-name);">bar</span> (foo)
+  (+ foo 1)
+</pre>
+</div><button class='copyBtn' name=btn_f3f0048dc9554e8cb0d15bb51ee44a6d>copy</button>
+<script type='text/javascript'>
+var copyBtnbtn_f3f0048dc9554e8cb0d15bb51ee44a6d=document.querySelector('button[name=btn_f3f0048dc9554e8cb0d15bb51ee44a6d]');
+copyBtnbtn_f3f0048dc9554e8cb0d15bb51ee44a6d.addEventListener('click', function(event) {
+copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 1)\n`);
+});
+</script>
+</div>
+</div>
+</div>
+<div id="outline-container-org2738ef0" class="outline-2">
+<h2 id="org2738ef0">this is some fancy entity stuff</h2>
+<div class="outline-text-2" id="text-org2738ef0">
+<p>
+&Gamma; &Sigma; &rho; &lambda;
+</p>
+</div>
+</div>
+<div id="outline-container-orgdee7bd6" class="outline-2">
+<h2 id="orgdee7bd6">this is some latex</h2>
+<div class="outline-text-2" id="text-orgdee7bd6">
+<div class="latex" id="orgb04191e">
+\begin{equation*}
+ \left\lceil \begin{matrix}
+ 1 & 2 & 3\\
+ a & b & c\\
+ \gamma & \sigma & \rho
+ \end{matrix} \right\rceil
+ \end{equation*}
+
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <script type="text/javascript">

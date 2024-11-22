@@ -11,6 +11,8 @@ here are some words about it
 #+begin_src emacs-lisp
   (defun foo (bar)
     (+ bar 1))
+  (defun bar (foo)
+    (+ foo 1)
 #+end_src
 * this is some fancy entity stuff
 \Gamma \Sigma \rho \lambda

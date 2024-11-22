@@ -1,4 +1,5 @@
 #+TITLE: Sitemap
 
-- [[file:bar.org][bar]]
-- [[file:foo.org][foo]]
+- sub
+  - [[file:sub/foo.org][Foo]]
+  - [[file:sub/bar.org][bar]]
