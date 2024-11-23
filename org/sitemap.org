@@ -1,5 +1,6 @@
 #+TITLE: Sitemap
 
 - sub
+  - [[file:sub/bat.org][Darksun]]
   - [[file:sub/foo.org][Foo]]
   - [[file:sub/bar.org][bar]]

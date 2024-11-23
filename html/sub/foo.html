@@ -62,6 +62,24 @@ body[data-theme='light'] .injected .separator {
 body[data-theme='dark'] .injected .separator {
     background-image: linear-gradient(to left, rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.75));
 }
+
+@media only screen and (max-width: 768px) {
+    .injected h1 {
+	margin-left: 5%;
+    }
+    .injected nav {
+	margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .injected h1 {
+	margin-left: 5%;
+    }
+    .injected nav {
+	margin-left: 5%;
+    }
+}
 /* basic layout ***************************************************************/
 *,
 *::before,
@@ -72,11 +90,11 @@ body[data-theme='dark'] .injected .separator {
 html {
     font-family: Sans;
     line-height: 1;
-    /*-webkit-text-size-adjust: 100%;*/
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-    background: #999; /* overwrite with theme bg */
+    background: #999; /* overwritten with theme --bg */
     width: 100%;
     margin: 0;
     padding: 0;
@@ -110,55 +128,54 @@ body {
 }
 
 
-
 /* custom facing **************************************************************/
 :root {
-  --bc-tb: #000000;
+  --bc-tb: #3b2685;
   --bc-block: initial;
-  --clr: #000000;
-  --clr-tb-hd: #0a0a0a;
-  --clr-code: #0a0a0a;
-  --bg: #ffffff;
-  --bg-code: #d7d7d7;
-  --bg-tb-hd: #d7d7d7;
-  --bg-block: initial;
-  --clr-link: #0000c0;
-  --clr-title: #000000;
-  --clr-todo: #2544bb;
+  --clr: #3b2685;
+  --clr-tb-hd: initial;
+  --clr-code: initial;
+  --bg: #fafafa;
+  --bg-code: #efeff1;
+  --bg-tb-hd: #efeff1;
+  --bg-block: #f4f4f4;
+  --clr-link: #005cc5;
+  --clr-title: #3b2685;
+  --clr-todo: #00afef;
   --bg-todo: initial;
-  --clr-done: #505050;
+  --clr-done: #778ca3;
   --bg-done: initial;
-  --ts-clr: #5317ac;
+  --ts-clr: #009c9f;
   --mg: 20px;
   --w-toc: 300px;
   --bg-keyword: initial;
-  --clr-keyword: #5317ac;
+  --clr-keyword: #009c9f;
   --bg-constant: initial;
-  --clr-constant: #0000c0;
+  --clr-constant: #005cc5;
   --bg-comment: initial;
-  --clr-comment: #505050;
+  --clr-comment: #778ca3;
   --bg-comment-delimiter: initial;
   --clr-comment-delimiter: initial;
   --bg-function: initial;
-  --clr-function: #721045;
+  --clr-function: #fa1090;
   --bg-variable: initial;
-  --clr-variable: #00538b;
+  --clr-variable: #ff5200;
   --bg-preprocessor: initial;
-  --clr-preprocessor: #a0132f;
+  --clr-preprocessor: #009c9f;
   --bg-doc: initial;
-  --clr-doc: #2a486a;
+  --clr-doc: initial;
   --bg-builtin: initial;
-  --clr-builtin: #8f0075;
+  --clr-builtin: #009c9f;
   --bg-string: initial;
-  --clr-string: #2544bb;
+  --clr-string: #00afef;
 }
 
-body[data-theme='light'] {
+body[data-mode='light'] {
   background: var(--bg);
   color: var(--clr);
 }
 
-body[data-theme='dark'] {
+body[data-mode='dark'] {
   background: var(--bg);
   color: var(--clr);
   --bc-tb: #cccccc;
@@ -209,22 +226,22 @@ body[data-theme='dark'] {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--bg-block); 
-    color: var(--clr-code);      
+    background: var(--bg); 
+    color: var(--clr-code);
     height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
-#toggle-theme {
+#toggle-mode {
     position: absolute;
     right: 0rem;
     display: block;
     text-align: center;
     font-size: 1.5rem;
-    background: var(--bg-block); 
+    background: var(--bg); 
     color: var(--clr-code);      
     padding-right: 1rem;
     padding-left: 1rem;
@@ -238,12 +255,12 @@ body[data-theme='dark'] {
     display: block;
     text-align: center;
     font-size: 1.5rem;
-    background: var(--bg-block);
+    background: var(--bg);
     color: var(--clr-code);
     padding-left: 1rem;
     padding-right: 1rem;
 }
-#toggle-theme:hover,
+#toggle-mode:hover,
 #toggle-toc:hover {
   cursor: pointer;
 }
@@ -256,19 +273,15 @@ body[data-theme='dark'] {
     max-width: 80rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    border: thin solid var(--bc-block);
-    background: var(--bg-block);
+    background: var(--bg);
     scrollbar-width: none;
     -ms-overflow-style: none;    
 }
-/*
+
 #table-of-contents::-webkit-scrollbar {
   display: none;
 }
-#table-of-contents > h2 {
-  display: none;
-}
-*/
+
 body[data-toc="true"] #content * {
     display: none;
 }
@@ -361,20 +374,18 @@ code {
 }
 
 pre {
-  padding: 20px;
-  border: 1px solid var(--bc-block);
-  background: var(--bg-block);
-  font-size: 0.9rem;
-  overflow-x: scroll;
+    padding: 1rem;
+    border: 1px solid var(--bc-block);
+    border-radius: 0.5rem;
+    background: var(--bg-block);
+    font-size: 0.9rem;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
 }
 
 pre::-webkit-scrollbar {
   display: none;
-}
-
-pre {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .todo {
@@ -435,29 +446,41 @@ img {
 }
 
 .org-src-wrapper .org-src-container {
-  position: relative;    
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-  padding: 10px;
+    position: relative;
+    border: 1px solid var(--bc-block);
+    border-radius: 0.5rem;
+    background: var(--bg-code);
+}
+
+.org-src-wrapper .org-src-container:has(+ .copyBtn) pre {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.org-src-wrapper .srcBtnBar {
+    width: 100%;
+    background: transparent;
+    position: relative;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .org-src-wrapper .copyBtn {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0rem;  
+  right: 0rem;
   background-color: transparent;
   color: var(--clr-doc);
   border: none;
-  padding: 5px 10px;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1rem;
-  border-radius: 8px;
+  font-size: 0.8rem;
   cursor: pointer;
   opacity: 0.5;
-  transition: opacity 0.3s;  
+  transition: opacity 0.3s;
 }
 
 .org-src-wrapper .copyBtn:hover {
@@ -465,120 +488,57 @@ img {
 }
 
 .org-src-wrapper .copyBtn i {
-  margin-right: 5px;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
 }
 
 
 /* responsive layouts *********************************************************/
 
-/*
-@media only screen and (max-width: 768px) {
-  #content {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #content {
-    width: 768px;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
-  body[data-toc="true"] {
-    align-items: flex-end;
-  }
-  body[data-toc="true"] #content {
-    width: calc(100vw - var(--w-toc) - var(--mg) * 4);
-    margin-right: var(--mg);
-  }
-  body[data-toc="false"] {
-    display: flex;
-    justify-content: center;
-  }
-  body[data-toc="false"] #content {
-    width: 80rem;/*calc(100vw - var(--mg) * 8);
-    margin-right: var(--mg);
-  }    
+    :root {
+	font-size: 0.875rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-  #toggle-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 2em;
-    line-height: 2em;
-    display: block;
-  }
-  #table-of-contents {
-    background: var(--bg);
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow-y: scroll;
-  }
-  #table-of-contents a {
-    color: var(--clr);
-  }
+    :root {
+	font-size: 0.75rem;
+    }
+    #content {
+	width: 90%;
+    }
+    #view-controls {
+	margin-top: 1.5em;
+    }
+    #toggle-toc[data-show='true'] {
+	padding-top: 1em;
+	padding-left: 5%;
+    }
+    #toggle-mode {
+	padding-top: 1em;	
+	padding-right: 5%;
+    }
+    
 }
 
-@media only screen and (min-width: 1024px) {
-  #table-of-contents {
-    font-size: 0.8rem;
-    position: fixed;
-    left: var(--mg);
-    top: var(--mg);
-    bottom: var(--mg);
-    width: var(--w-toc);
-    overflow-y: scroll;
-  }
+@media only screen and (max-width: 480px) {
+    :root {
+	font-size: 0.625rem;
+    }
+    #content {
+	width: 90%;
+    }
+    #view-controls {
+	margin-top: 1.5em;
+    }    
+    #toggle-toc[data-show='true'] {
+	padding-left: 5%;
+    }
+    #toggle-mode {	
+	padding-right: 5%;
+    }    
 }
-
-
-@media only screen and (max-width: 768px) {
-  #toggle-theme {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #toggle-theme {
-    position: absolute;
-    top: var(--mg);
-    right: var(--mg);
-    border-radius: 5px;
-  }
-}
-
-.theme-transition {
-  transition: all 0.5s;
-}
-
-.status {
-  width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-  ul {
-    padding-left: .5em;
-    margin-left: 0;
-  }
-  li {
-    padding-left: 0;
-    margin-left: 0;
-  }
-}
-*/
 /*]]>*/-->
 </style>
 <script>
@@ -618,7 +578,6 @@ img {
 <div id="preamble" class="status">
 <div id='injected-head' class='injected'><div>
   <header>
-    <!---->
     <h1 id="myname">Ewan Townshend</h1>
     <div class="separator"></div>
     <nav>
@@ -629,10 +588,9 @@ img {
       </div>
     </nav>
     <div class="separator"></div>
-    <!---->
   </header>
 </div>
-</div><div id='view-controls'><div id='toggle-theme'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
+</div><div id='view-controls'><div id='toggle-mode'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
 </div>
 <div id="content" class="content">
 <h1 class="title">Foo</h1>
@@ -644,15 +602,7 @@ img {
 <li><a href="#org4cd4bfc">this is a code snippet</a></li>
 <li><a href="#org2738ef0">this is some fancy entity stuff</a></li>
 <li><a href="#orgdee7bd6">this is some latex</a></li>
-<li><a href="#org9bc56c4">this is a headline</a>
-<ul>
-<li><a href="#org0cb0311">this is a sub</a>
-<ul>
-<li><a href="#orge9f7234">three layers</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#org9bc56c4">this is a headline</a></li>
 </ul>
 </div>
 </div>
@@ -678,10 +628,10 @@ here are some words about it
 (<span style="color: var(--clr-keyword); background-color: var(--bg-keyword);">defun</span> <span style="color: var(--function-clr-name); background-color: var(--function-bg-name);">bar</span> (foo)
   (+ foo 1)
 </pre>
-</div><button class='copyBtn' name=btn_11706a482ffc477e94e4dcd5dcc5577d>copy</button>
+</div><button class='copyBtn' name=btn_885a253c1a3b4392a792cda5a7dcf84f>copy</button>
 <script type='text/javascript'>
-var copyBtnbtn_11706a482ffc477e94e4dcd5dcc5577d=document.querySelector('button[name=btn_11706a482ffc477e94e4dcd5dcc5577d]');
-copyBtnbtn_11706a482ffc477e94e4dcd5dcc5577d.addEventListener('click', function(event) {
+var copyBtnbtn_885a253c1a3b4392a792cda5a7dcf84f=document.querySelector('button[name=btn_885a253c1a3b4392a792cda5a7dcf84f]');
+copyBtnbtn_885a253c1a3b4392a792cda5a7dcf84f.addEventListener('click', function(event) {
 copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 1)\n`);
 });
 </script>
@@ -699,7 +649,7 @@ copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 
 <div id="outline-container-orgdee7bd6" class="outline-2">
 <h2 id="orgdee7bd6">this is some latex</h2>
 <div class="outline-text-2" id="text-orgdee7bd6">
-<div class="latex" id="org96e060d">
+<div class="latex" id="orge63a174">
 \begin{equation*}
  \left\lceil \begin{matrix}
  1 & 2 & 3\\
@@ -715,12 +665,10 @@ copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 
 <h2 id="org9bc56c4">this is a headline</h2>
 <div class="outline-text-2" id="text-org9bc56c4">
 </div>
-<div id="outline-container-org0cb0311" class="outline-3">
-<h3 id="org0cb0311">this is a sub</h3>
-<div class="outline-text-3" id="text-org0cb0311">
-</div>
-<div id="outline-container-orge9f7234" class="outline-4">
-<h4 id="orge9f7234">three layers</h4>
+<ul class="org-ul">
+<li><a id="org0cb0311"></a>this is a sub<br />
+<ul class="org-ul">
+<li><a id="orge9f7234"></a>three layers<br />
 <div class="outline-text-4" id="text-orge9f7234">
 <ul class="org-ul">
 <li>foo
@@ -729,52 +677,32 @@ copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 
 </ul></li>
 </ul>
 </div>
-</div>
-</div>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 <div id="postamble" class="status">
 <script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
-let theme = 'dark';  // default
+let cookie = document.cookie.split('; ').find(r => r.startsWith('theme-mode'))
 
-let theme_cookie = document.cookie.split('; ').find(r => r.startsWith('org_html_themify_theme'))
-if (theme_cookie) {
-  theme = theme_cookie.split('=')[1]
+let mode = cookie ? cookie.split('=')[1] : 'dark'; // Default
+
+let toggleModeBtn = document.getElementById('toggle-mode');
+
+setMode(mode);
+
+function setMode(mode) {
+  document.body.dataset.mode = mode;
+  toggleModeBtn.innerHTML = (mode === 'light') ? '&#9789;' : '&#9788;';
+  document.cookie = 'theme-mode=' + mode;
 }
 
-let toggleThemeBtn = document.getElementById('toggle-theme')
-
-if (theme == 'light') {
-  useLightTheme();
-} else {
-  useDarkTheme();
-}
-
-function transition() {
-  document.body.classList.add('theme-transition')
-  setTimeout(() => document.body.classList.remove('theme-transition'), 500)
-}
-
-function useLightTheme(theme) {
-  document.body.dataset.theme = 'light'
-  toggleThemeBtn.innerHTML = '&#9789;'
-  document.cookie = 'org_html_themify_theme=light'
-}
-
-function useDarkTheme(theme) {
-  document.body.dataset.theme = 'dark'
-  toggleThemeBtn.innerHTML = '&#9788;'
-  document.cookie = 'org_html_themify_theme=dark'
-}
-
-toggleThemeBtn.addEventListener('click', function() {
-  transition()
-  if (document.body.dataset.theme == 'light') {
-    useDarkTheme();
-  } else {
-    useLightTheme();
-  }
+toggleModeBtn.addEventListener('click', () => {
+  mode = document.body.dataset.mode === 'dark' ? 'light' : 'dark';
+  setMode(mode);
 })
 
 
@@ -782,27 +710,21 @@ let toggleTocBtn = document.getElementById('toggle-toc')
 let toc = document.getElementById('table-of-contents')
 
 if (toc) {
-  toc.dataset.show = '';
   toggleTocBtn.dataset.show = 'true';
-  toggleTocBtn.addEventListener('click', function() {
-    toc.dataset.show = toc.dataset.show ? '' : 'true';
-    document.body.dataset.toc = toc.dataset.show;
-    toc.addEventListener('click', function() {
-      if (toc.dataset.show) {
-	toc.dataset.show = "";
-      }
+  toggleTocBtn.addEventListener('click', () => {
+    let showingToc = document.body.dataset.toc;
+    document.body.dataset.toc = showingToc ? '' : 'true';
+    toc.addEventListener('click', () => {
       if (document.body.dataset.toc) {
 	document.body.dataset.toc = "";
       }
     })
   })
-} else {
-  document.body.dataset.toc = 'false';
 }
 
 function copyTextToClipboard(text) {
   // Make invisible textarea
-  var textArea = document.createElement("textarea");  
+  var textArea = document.createElement("textarea");
   textArea.style.position = 'fixed';
   textArea.style.top = 0;
   textArea.style.left = 0;
