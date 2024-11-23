@@ -1,6 +1,6 @@
 #+title: Foo
 #+author: Ewan
-#+options: ^:{}
+#+options: ^:{} toc:3
 #+LATEX_HEADER: \usepackage{amsmath}
 * this is foo
 + link to sitemap: [[./sitemap.org][sitemap]]
@@ -26,3 +26,9 @@ here are some words about it
  \end{matrix} \right\rceil
  \end{equation*}
 #+end_latex
+* this is a headline
+** this is a sub
+*** three layers
+- foo
+  * 
+  

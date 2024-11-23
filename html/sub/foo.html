@@ -9,11 +9,10 @@
 <meta name="generator" content="Org Mode" />
 <style type='text/css'>
 <!--/*--><![CDATA[/*><!--*/
-.injected #head-spacer {
-    margin-top: 9rem;
+#injected-head {
+    width: 100%;
 }
-
-.injected header {
+.injected header {    
     text-align: left;
     top: 0;
     left: 0;
@@ -21,6 +20,7 @@
 }
 
 .injected h1 {
+    width: 100%;    
     display: flex;
     text-align: left;
     margin-left: 1rem;
@@ -28,13 +28,16 @@
 }
 
 .injected nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     text-align: left;
-    margin-left: 1rem;    
+    margin-left: 1rem;
 }
 
 .injected .nav-links {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     gap: 3.6rem;
 }
 
@@ -59,6 +62,7 @@ body[data-theme='light'] .injected .separator {
 body[data-theme='dark'] .injected .separator {
     background-image: linear-gradient(to left, rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.75));
 }
+/* basic layout ***************************************************************/
 *,
 *::before,
 *::after {
@@ -67,16 +71,20 @@ body[data-theme='dark'] .injected .separator {
 
 html {
     font-family: Sans;
-    line-height: 1.35;
-    -webkit-text-size-adjust: 100%;
+    line-height: 1;
+    /*-webkit-text-size-adjust: 100%;*/
 }
 
 body {
-    background: #999;
+    background: #999; /* overwrite with theme bg */
+    width: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
     font-family:
 	system-ui,
 	-apple-system,
@@ -89,59 +97,21 @@ body {
 	'Segoe UI Emoji';
 }
 
-hr {
-	height: 0;
-	color: inherit;
+#preamble,
+#postamble {
+    width: 100%;
 }
 
-b,
-strong {
-	font-weight: bolder;
+#content {
+    width: 80%;
+    max-width: 80rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-code,
-kbd,
-samp,
-pre {
-    font-family:
-	Menlo,
-	ui-monospace,
-	SFMono-Regular,
-	Consolas,
-	'Liberation Mono',		
-	monospace;
-    font-size: 1em;
-}
 
-small {
-	font-size: 80%;
-}
 
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-sup {
-	top: -0.5em;
-}
-
-table {
-	text-indent: 0;
-	border-color: inherit;
-}
-
-summary {
-	display: list-item;
-}
-
+/* custom facing **************************************************************/
 :root {
   --bc-tb: #000000;
   --bc-block: initial;
@@ -208,7 +178,7 @@ body[data-theme='dark'] {
   --bg-done: initial;
   --ts-clr: #cc99cc;
   --mg: 20px;
-  --w-toc: 300px;
+  --w-toc: 300px;  
   --bg-keyword: initial;
   --clr-keyword: #cc99cc;
   --bg-constant: initial;
@@ -232,36 +202,134 @@ body[data-theme='dark'] {
 }
 
 
-@media only screen and (max-width: 768px) {
-  #content {
+
+/* ootb template **************************************************************/
+#view-controls {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #content {
-    width: 768px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  body[data-toc="true"] {
-    align-items: flex-end;
-  }
-  body[data-toc="true"] #content {
-    width: calc(100vw - var(--w-toc) - var(--mg) * 4);
-    margin-right: var(--mg);
-  }
-  body[data-toc="false"] {
+    background: var(--bg-block); 
+    color: var(--clr-code);      
+    height: 1.5rem;
     display: flex;
-    justify-content: center;
-  }
-  body[data-toc="false"] #content {
-    width: 80rem;/*calc(100vw - var(--mg) * 8);*/
-    margin-right: var(--mg);
-  }    
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#toggle-theme {
+    position: absolute;
+    right: 0rem;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    background: var(--bg-block); 
+    color: var(--clr-code);      
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+#toggle-toc {
+    display: none;
+}
+#toggle-toc[data-show="true"] {
+    position: absolute;
+    left: 0rem;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    background: var(--bg-block);
+    color: var(--clr-code);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#toggle-theme:hover,
+#toggle-toc:hover {
+  cursor: pointer;
+}
+
+#table-of-contents {
+    display: none;
+}
+#table-of-contents[data-show="true"] {
+    width: 80%;
+    max-width: 80rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: thin solid var(--bc-block);
+    background: var(--bg-block);
+    scrollbar-width: none;
+    -ms-overflow-style: none;    
+}
+/*
+#table-of-contents::-webkit-scrollbar {
+  display: none;
+}
+#table-of-contents > h2 {
+  display: none;
+}
+*/
+body[data-toc="true"] #content * {
+    display: none;
+}
+body[data-toc="true"] #content #table-of-contents,
+body[data-toc="true"] #content #table-of-contents * {
+    display: block;
+}
+
+/* misc elements **************************************************************/
+    
+hr {
+	height: 0;
+	color: inherit;
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family:
+	Menlo,
+	ui-monospace,
+	SFMono-Regular,
+	Consolas,
+	'Liberation Mono',		
+	monospace;
+    font-size: 1em;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+table {
+	text-indent: 0;
+	border-color: inherit;
+}
+
+summary {
+	display: list-item;
 }
 
 h1 {
@@ -341,6 +409,9 @@ td, th {
 li {
   line-height: 2rem;
 }
+#text-table-of-contents li a:before {
+    content: "• "
+}
 
 a {
   text-decoration: none;
@@ -351,22 +422,86 @@ a:hover {
   text-decoration: underline;
 }
 
-#table-of-contents > h2 {
-  display: none;
+.MathJax_Display {
+  font-size: 1.25em;
 }
 
-#table-of-contents {
-  border: thin solid var(--bc-block);
-  background: var(--bg-block);
+
+img {
+  width: 100%;
+}
+.org-src-wrapper {
+  position: relative;
 }
 
-#toggle-toc {
-  display: none;
+.org-src-wrapper .org-src-container {
+  position: relative;    
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  padding: 10px;
 }
 
-/* TODO - integrate collapsible TOC
-.toc-show {
-  display: block!important;
+.org-src-wrapper .copyBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  color: var(--clr-doc);
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;  
+}
+
+.org-src-wrapper .copyBtn:hover {
+  opacity: 1;
+}
+
+.org-src-wrapper .copyBtn i {
+  margin-right: 5px;
+}
+
+
+/* responsive layouts *********************************************************/
+
+/*
+@media only screen and (max-width: 768px) {
+  #content {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #content {
+    width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body[data-toc="true"] {
+    align-items: flex-end;
+  }
+  body[data-toc="true"] #content {
+    width: calc(100vw - var(--w-toc) - var(--mg) * 4);
+    margin-right: var(--mg);
+  }
+  body[data-toc="false"] {
+    display: flex;
+    justify-content: center;
+  }
+  body[data-toc="false"] #content {
+    width: 80rem;/*calc(100vw - var(--mg) * 8);
+    margin-right: var(--mg);
+  }    
 }
 
 @media only screen and (max-width: 768px) {
@@ -408,60 +543,14 @@ a:hover {
   }
 }
 
-#table-of-contents::-webkit-scrollbar {
-  display: none;
-}
 
-#table-of-contents {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-*/
-.MathJax_Display {
-  font-size: 1.25em;
-}
-
-#view-controls {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--bg-block);
-    color: var(--clr-code);
-    height: 3rem;
-    width: 100%;    
-    display: flex;
-    align-items: center;
-}
-
-#toggle-theme {
-    position: absolute;
-    top: 0;
-    display: block;
-    text-align: center;
-    font-size: 1.5rem;
-    background: var(--bg-block);
-    color: var(--clr-code);
-    transform: translateY(-1.5rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-#toggle-theme:hover {
-  cursor: pointer;
-}
-
-img {
-  width: 100%;
-}
-/*
 @media only screen and (max-width: 768px) {
   #toggle-theme {
     width: 100%;
     text-align: center;
   }
 }
-*/
+
 @media only screen and (min-width: 768px) {
   #toggle-theme {
     position: absolute;
@@ -489,44 +578,7 @@ img {
     margin-left: 0;
   }
 }
-
-.org-src-wrapper {
-  position: relative;
-}
-
-.org-src-wrapper .org-src-container {
-  position: relative;    
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-}
-
-.org-src-wrapper .copyBtn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: transparent;
-  color: var(--clr-doc);
-  border: none;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.3s;  
-}
-
-.org-src-wrapper .copyBtn:hover {
-  opacity: 1;
-}
-
-.org-src-wrapper .copyBtn i {
-  margin-right: 5px;
-}
+*/
 /*]]>*/-->
 </style>
 <script>
@@ -566,6 +618,7 @@ img {
 <div id="preamble" class="status">
 <div id='injected-head' class='injected'><div>
   <header>
+    <!---->
     <h1 id="myname">Ewan Townshend</h1>
     <div class="separator"></div>
     <nav>
@@ -576,12 +629,33 @@ img {
       </div>
     </nav>
     <div class="separator"></div>
+    <!---->
   </header>
 </div>
 </div><div id='view-controls'><div id='toggle-theme'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
 </div>
 <div id="content" class="content">
 <h1 class="title">Foo</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4f843a5">this is foo</a></li>
+<li><a href="#org4cd4bfc">this is a code snippet</a></li>
+<li><a href="#org2738ef0">this is some fancy entity stuff</a></li>
+<li><a href="#orgdee7bd6">this is some latex</a></li>
+<li><a href="#org9bc56c4">this is a headline</a>
+<ul>
+<li><a href="#org0cb0311">this is a sub</a>
+<ul>
+<li><a href="#orge9f7234">three layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div id="outline-container-org4f843a5" class="outline-2">
 <h2 id="org4f843a5">this is foo</h2>
 <div class="outline-text-2" id="text-org4f843a5">
@@ -604,10 +678,10 @@ here are some words about it
 (<span style="color: var(--clr-keyword); background-color: var(--bg-keyword);">defun</span> <span style="color: var(--function-clr-name); background-color: var(--function-bg-name);">bar</span> (foo)
   (+ foo 1)
 </pre>
-</div><button class='copyBtn' name=btn_f3f0048dc9554e8cb0d15bb51ee44a6d>copy</button>
+</div><button class='copyBtn' name=btn_11706a482ffc477e94e4dcd5dcc5577d>copy</button>
 <script type='text/javascript'>
-var copyBtnbtn_f3f0048dc9554e8cb0d15bb51ee44a6d=document.querySelector('button[name=btn_f3f0048dc9554e8cb0d15bb51ee44a6d]');
-copyBtnbtn_f3f0048dc9554e8cb0d15bb51ee44a6d.addEventListener('click', function(event) {
+var copyBtnbtn_11706a482ffc477e94e4dcd5dcc5577d=document.querySelector('button[name=btn_11706a482ffc477e94e4dcd5dcc5577d]');
+copyBtnbtn_11706a482ffc477e94e4dcd5dcc5577d.addEventListener('click', function(event) {
 copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 1)\n`);
 });
 </script>
@@ -625,7 +699,7 @@ copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 
 <div id="outline-container-orgdee7bd6" class="outline-2">
 <h2 id="orgdee7bd6">this is some latex</h2>
 <div class="outline-text-2" id="text-orgdee7bd6">
-<div class="latex" id="orgb04191e">
+<div class="latex" id="org96e060d">
 \begin{equation*}
  \left\lceil \begin{matrix}
  1 & 2 & 3\\
@@ -634,6 +708,27 @@ copyTextToClipboard(`(defun foo (bar)\n  (+ bar 1))\n(defun bar (foo)\n  (+ foo 
  \end{matrix} \right\rceil
  \end{equation*}
 
+</div>
+</div>
+</div>
+<div id="outline-container-org9bc56c4" class="outline-2">
+<h2 id="org9bc56c4">this is a headline</h2>
+<div class="outline-text-2" id="text-org9bc56c4">
+</div>
+<div id="outline-container-org0cb0311" class="outline-3">
+<h3 id="org0cb0311">this is a sub</h3>
+<div class="outline-text-3" id="text-org0cb0311">
+</div>
+<div id="outline-container-orge9f7234" class="outline-4">
+<h4 id="orge9f7234">three layers</h4>
+<div class="outline-text-4" id="text-orge9f7234">
+<ul class="org-ul">
+<li>foo
+<ul class="org-ul">
+<li></li>
+</ul></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -687,12 +782,18 @@ let toggleTocBtn = document.getElementById('toggle-toc')
 let toc = document.getElementById('table-of-contents')
 
 if (toc) {
-  document.body.dataset.toc = 'true';
-  toc.classList.add('toc-show')
+  toc.dataset.show = '';
+  toggleTocBtn.dataset.show = 'true';
   toggleTocBtn.addEventListener('click', function() {
-    toc.classList.add('toc-show')
+    toc.dataset.show = toc.dataset.show ? '' : 'true';
+    document.body.dataset.toc = toc.dataset.show;
     toc.addEventListener('click', function() {
-      toc.classList.remove('toc-show')
+      if (toc.dataset.show) {
+	toc.dataset.show = "";
+      }
+      if (document.body.dataset.toc) {
+	document.body.dataset.toc = "";
+      }
     })
   })
 } else {

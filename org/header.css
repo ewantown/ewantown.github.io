@@ -1,8 +1,7 @@
-.injected #head-spacer {
-    margin-top: 9rem;
+#injected-head {
+    width: 100%;
 }
-
-.injected header {
+.injected header {    
     text-align: left;
     top: 0;
     left: 0;
@@ -10,6 +9,7 @@
 }
 
 .injected h1 {
+    width: 100%;    
     display: flex;
     text-align: left;
     margin-left: 1rem;
@@ -17,13 +17,16 @@
 }
 
 .injected nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     text-align: left;
-    margin-left: 1rem;    
+    margin-left: 1rem;
 }
 
 .injected .nav-links {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     gap: 3.6rem;
 }
 
