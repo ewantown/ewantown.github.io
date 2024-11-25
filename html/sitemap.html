@@ -9,59 +9,6 @@
 <meta name="generator" content="Org Mode" />
 <style type='text/css'>
 <!--/*--><![CDATA[/*><!--*/
-#injected-head {
-    width: 100%;
-}
-.injected header {    
-    text-align: left;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.injected h1 {
-    width: 100%;    
-    display: flex;
-    text-align: left;
-    padding-left: 5%;
-    font-family: Charter;
-}
-
-.injected nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    text-align: left;
-    padding-left: 5%;
-}
-
-.injected .nav-links {
-    display: flex;
-    justify-content: flex-start;
-    gap: 3.6rem;
-}
-
-.injected .nav-item {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-}
-
-.injected .separator {
-    width: 100%;
-    height: 0.2rem;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
-    margin: 0.5rem auto;
-}
-
-body[data-theme='light'] .injected .separator {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
-}
-
-body[data-theme='dark'] .injected .separator {
-    background-image: linear-gradient(to left, rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.75));
-}
 /* et-org-html.css
 ;;==============================================================================
 ;; Copyright (C) 2024, Ewan Townshend
@@ -97,7 +44,7 @@ body[data-theme='dark'] .injected .separator {
 }
 html {
     font-family: Sans;
-    line-height: 1;
+    line-height: 1.3;
     font-size: calc(15px + 0.390625vw);
     -webkit-text-size-adjust: 100%;
 }
@@ -360,7 +307,8 @@ h2, h3, h4, h5, h6, h7 {
   font-family: Sans Serif;
 }
 h2 {
-  line-height: 2.5em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 h2::before {
   content: "◉ ";
@@ -425,7 +373,8 @@ td, th {
 }
 
 li {
-  line-height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 #text-table-of-contents li a:before {
     content: "• "
@@ -549,21 +498,7 @@ img {
 </head>
 <body>
 <div id="preamble" class="status">
-<div id='injected-head' class='injected'><div>
-  <header>
-    <h1 id="myname">Ewan Townshend</h1>
-    <div class="separator"></div>
-    <nav>
-      <div class="nav-links">
-	<a href="#home" class="nav-item">Home</a>
-	<a href="#about" class="nav-item">About</a>
-	<a href="#blog" class="nav-item">Blog</a>
-      </div>
-    </nav>
-    <div class="separator"></div>
-  </header>
-</div>
-</div><div id='view-controls'><div id='toggle-mode'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
+<div id='view-controls'><div id='toggle-mode'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
 </div>
 <div id="content" class="content">
 <h1 class="title">Sitemap</h1>
@@ -665,15 +600,17 @@ function copyTextToClipboard(text) {
   document.body.appendChild(textArea);
   textArea.focus();
   textArea.select();
+  var res;
   try {
-    var success = document.execCommand('copy');
-    console.log(success ? 'Copied text' : 'Could not copy text');
+    res = document.execCommand('copy');
   } catch (err) {
-    console.log('Error copying text');
+    res = false;
   }
 
   // Remove invisible textarea
   document.body.removeChild(textArea);
+
+  return res;
 }
 /*]]>*/-->
 </script>
