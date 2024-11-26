@@ -1,5 +1,0 @@
-* this is bar
-+ link to sitemap: [[./sitemap.org][sitemap]]
-+ link to foo: [[./foo.org][foo]]
-* this is headline 2
-** headline 2.1

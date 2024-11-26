@@ -1,10 +1,19 @@
 #injected-header {
     width: 100%;
+    line-height: 1;    
 }
+#injected-footer {
+    width: 100%;    
+}
+
 .injected header {    
     text-align: left;
     top: 0;
     left: 0;
+    width: 100%;
+}
+.injected footer {
+    text-align: left;
     width: 100%;
 }
 
@@ -50,4 +59,9 @@ body[data-theme='light'] .injected .separator {
 
 body[data-theme='dark'] .injected .separator {
     background-image: linear-gradient(to left, rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.75));
+}
+
+.injected address {
+    padding-left: 5%;
+    padding-bottom: 0.5rem;
 }

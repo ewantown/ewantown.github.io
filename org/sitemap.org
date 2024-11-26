@@ -1,6 +1,6 @@
 #+TITLE: Sitemap
 
-- sub
-  - [[file:sub/bat.org][Darksun]]
-  - [[file:sub/foo.org][Foo]]
-  - [[file:sub/bar.org][bar]]
+- [[file:home.org][Home]]
+- [[file:about.org][about]]
+- [[file:projects.org][projects]]
+- [[file:ramblings.org][ramblings]]

@@ -1,0 +1,34 @@
+#+Title: Home
+#+Author: Ewan Townshend
+#+Options: toc:nil ^:nil title:nil
+
+
+#+BEGIN_EXPORT html
+<div style="width:100%; display:block;">
+<div style="max-width:300px; display:block; margin-left:auto; margin-right:auto;">
+#+END_EXPORT
+#+ATTR_HTML: :style max-width:300px; 
+[[./images/headshot.jpg]]
+
+@@html:<div style="display:inline;transform:translateY(0.15rem)">&#9993;</div>@@ : [[mailto:ewan@etown.dev][ewan@etown.dev]]
+@@html:<br />@@
+@@html:<div style="display:inline;transform:translateY(0.15rem)">&#127760;</div>@@ : [[https://etown.dev][etown.dev]] @@html:<a href="https://www.linkedin.com/in/ewan-townshend/"><img src="./images/in.png" alt="LinkedIn" style="display:inline;width:1.3rem; height:1rem;transform:translateY(0.15rem);margin-left:0.5rem"/></a>@@
+@@html:<br />@@
+@@html:<div style="display:inline;transform:translateY(0.15rem)">&#128206;</div>@@ : [[file:./other/sw-resume.pdf][resume.pdf]]
+#+BEGIN_EXPORT html
+</div>
+</div>
+#+END_EXPORT
+
+* Welcome!
+
+You've landed at my place on the web. This site contains details about myself, my employment and projects, and some writings about life, the universe, and everything - but mostly just technology and (analytic) philosophy.
+
+I'm currently living in beautiful Vancouver, British Columbia, and employed as a software developer by WorkSafeBC. My workdays consist of building REST APIs and event-driven architecture to connect a Java monolith with various C# microservices running in "the cloud". In case that doesn't excite you, I spend most evenings at a lovely little nonprofit boxing gym, and snow permitting, my weekends on the slopes of Whistler.
+
+I have an eclectic educational background, stretching from social and cognitive anthropology to analytic philosophy and computer science. In a word, I studied "cognitive science", with numerous forays into other arenas, before settling into a career making software. Uniting all of these interests is a long-standing fascination with all forms of symbolic activity, which today manifests mostly clearly in my thinking about programming language theory and combinatorial search problems.
+
+For a bit more about me, the person, and about this site, head to the [[./about.org][About]] page. For information about various bits of software I've made, check out the [[./projects.org][Projects]] pages. Finally, for my thoughts on all sorts of stuff, visit my [[./ramblings.org][Ramblings]]. 
+
+
+
