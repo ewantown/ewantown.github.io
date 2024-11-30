@@ -1,6 +1,7 @@
 #+TITLE: Sitemap
 
 - [[file:home.org][Home]]
+- [[file:test.org][Title]]
 - [[file:about.org][about]]
 - [[file:projects.org][projects]]
 - [[file:ramblings.org][ramblings]]
