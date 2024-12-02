@@ -1,0 +1,5 @@
+#+Title: Ramblings
+#+Author: Ewan Townshend
+#+Options: toc:3 num:nil
+
+Under construction.
