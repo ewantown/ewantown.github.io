@@ -28,7 +28,7 @@ I currently reside in [[https://en.wikipedia.org/wiki/Vancouver][Vancouver]], Br
 
 I have an eclectic educational background, stretching from social and cognitive anthropology to analytic philosophy and computer science. Roughly, I studied "cognitive science", with numerous forays into other arenas, before settling into a career making software. Uniting all of these interests is a fascination with symbolic activity, which today manifests in my thinking about programming language theory and combinatorial search problems.
 
-For a bit more about me, the person, and about this site, head to [[./about.org][About]]. For information about various bits of software I've made - including the [[https://i.redd.it/9c9z0a427eba1.png][Emacs]] package that generated this website - check out [[./projects.org][Projects]]. Finally, for my thoughts on all sorts of stuff, see [[./ramblings.org][Ramblings]]. 
+For a bit more about me, the person, and this site, head to [[./about.org][About]]. For information about various things I've made - including the [[https://i.redd.it/9c9z0a427eba1.png][Emacs]] package that generated this website - check out [[./projects.org][Projects]]. For my take on various topics, see the aptly named [[./thoughts.org][Thoughts]].
 
 
 
