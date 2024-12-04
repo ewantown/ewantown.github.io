@@ -22,7 +22,7 @@ possible sense of the term.
 #+end_quote
 I understand philosophy and this aim reciprocally: philosophy just /is/ the pursuit of such understanding. Alas, it is then difficult say, succinctly, what interests me about philosophy. Maybe it's the way that "no intellectual holds are barred". Or maybe it's just that deploying everything I know of the world, in an effort to make sense of some little part of it, pleasantly tickles my brain. In any case, this "catch all" interest allows me to learn in fields as far away from my "core" interests (cognition and computation), as physics, archaeology, or cell biology, without feeling out of place.
 
-** Nonclassical logics
+** Non-classical logics
 The history of so-called [[https://en.wikipedia.org/wiki/Non-classical_logic]["non-classical" logics]] is usually traced to C.I. Lewis's formalization of "strict" implication in response to the use of "material" implication in Russell and Whitehead's /Principia Mathematica/. History aside, I share Lewis's commitment to a [[https://www.informationphilosopher.com/knowledge/philosophers/lewis/Pragmatic_a_priori.html][pragmatic conception of /a priori/ knowledge]], esp. of "laws of logic":
 #+begin_quote
 The /a priori/ represents an attitude in some sense freely taken, a stipulation of the mind itself, and a stipulation which might be made in some other way if it suited our bent or need.
