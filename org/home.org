@@ -22,11 +22,11 @@
 
 * Welcome!
 
-You've landed. I'm Ewan ('you-win') and this site contains details about myself, my employment and projects, and some writings about life, the universe, and everything - but mostly technology and (analytic) philosophy.
+You've landed. I'm Ewan ("you-win") and this site contains details about myself, my employment and projects, and some writings about computing and analytic philosophy of mind.
 
 I currently reside in [[https://en.wikipedia.org/wiki/Vancouver][Vancouver]], British Columbia, and am employed as a software developer by [[https://www.worksafebc.com/en][WorkSafeBC]]. My workdays consist of building REST APIs and event-driven architecture to connect a Java monolith with various C# microservices. If that doesn't excite you, I spend most evenings at a little nonprofit [[https://www.eastsideboxingclub.com/][boxing gym]], and snow permitting, my weekends on the slopes of [[https://agnarchy.com/wp-content/uploads/2016/08/Winter-Dual-Mountain-Village-Evening-Bluebird-Lights-DavidMcColm-26390.jpg][Whistler]].
 
-I have an eclectic educational background, stretching from social and cognitive anthropology to analytic philosophy and computer science. Roughly, I studied "cognitive science", with numerous forays into other arenas, before settling into a career making software. Uniting all of these interests is a fascination with symbolic activity, which today manifests in my thinking about programming language theory and combinatorial search problems.
+Roughly, I studied "cognitive science", with numerous forays into other arenas, before settling into a career making software. My education wound through social and cognitive anthropology, analytic philosophy, and computer science. The uniting thread: a core fascination with symbolic activity, which today manifests mostly in my thinking about programming language theory and combinatorial search problems.
 
 For a bit more about me, the person, and this site, head to [[./about.org][About]]. For information about various things I've made - including the [[https://i.redd.it/9c9z0a427eba1.png][Emacs]] package that generated this website - check out [[./projects.org][Projects]]. For my take on various topics, see the aptly named [[./thoughts.org][Thoughts]].
 
