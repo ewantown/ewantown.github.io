@@ -25,7 +25,7 @@ I understand philosophy and this aim reciprocally: philosophy just /is/ the purs
 ** Nonclassical logics
 The history of so-called [[https://en.wikipedia.org/wiki/Non-classical_logic]["non-classical" logics]] is usually traced to C.I. Lewis's formalization of "strict" implication in response to the use of "material" implication in Russell and Whitehead's /Principia Mathematica/. History aside, I share Lewis's commitment to a [[https://www.informationphilosopher.com/knowledge/philosophers/lewis/Pragmatic_a_priori.html][pragmatic conception of /a priori/ knowledge]], esp. of "laws of logic":
 #+begin_quote
-The a priori represents an attitude in some sense freely taken, a stipulation of the mind itself, and a stipulation which might be made in some other way if it suited our bent or need.
+The /a priori/ represents an attitude in some sense freely taken, a stipulation of the mind itself, and a stipulation which might be made in some other way if it suited our bent or need.
 #+end_quote
 I am thus interested in non-classical logics, as legitimately alternative systems of principles with respect to which my thinking and speaking may be governed, if being so governed -- with respect to some domain -- would be useful. In this regard, I have some stock in [[https://en.wikipedia.org/wiki/Non-monotonic_logic][non-monotonic]] and [[https://en.wikipedia.org/wiki/Paraconsistent_logic][paraconsistent]] logics, for the purposes of practical reasoning, and in [[https://en.wikipedia.org/wiki/Intuitionistic_logic][intuitionistic]] and [[https://en.wikipedia.org/wiki/Linear_logic][linear]] logics, for the purposes of thinking about computational processes.
 
