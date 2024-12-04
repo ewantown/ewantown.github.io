@@ -28,7 +28,7 @@ I currently reside in [[https://en.wikipedia.org/wiki/Vancouver][Vancouver]], Br
 
 Roughly, I studied "cognitive science", with numerous forays into other arenas, before settling into a career making software. My education wound through social and cognitive anthropology, analytic philosophy, and computer science. The uniting thread: a core fascination with symbolic activity, which today manifests mostly in my thinking about programming language theory and combinatorial search problems.
 
-For a bit more about me, the person, and this site, head to [[./about.org][About]]. For information about various things I've made - including the [[https://i.redd.it/9c9z0a427eba1.png][Emacs]] package that generated this website - check out [[./projects.org][Projects]]. For my take on various topics, see the aptly named [[./thoughts.org][Thoughts]].
+For a bit more about me, head to [[./about.org][About]]. For information about various things I've made - including the [[https://i.redd.it/9c9z0a427eba1.png][Emacs]] package that generated this website - check out [[./projects.org][Projects]]. For my take on various topics, see the aptly named [[./thoughts.org][Thoughts]].
 
 
 
