@@ -22,7 +22,7 @@
 
 * Welcome!
 
-You've landed. I'm Ewan ("you-win") and this site contains details about myself, my employment and projects, and some writings about computing and analytic philosophy of mind.
+You've landed. I'm Ewan ("you-win") and this site contains details about myself, my employment and projects, and some writings about computing and analytic philosophy.
 
 I currently reside in [[https://en.wikipedia.org/wiki/Vancouver][Vancouver]], British Columbia, and am employed as a software developer by [[https://www.worksafebc.com/en][WorkSafeBC]]. My workdays consist of building REST APIs and event-driven architecture to connect a Java monolith with various C# microservices. If that doesn't excite you, I spend most evenings at a little nonprofit [[https://www.eastsideboxingclub.com/][boxing gym]], and snow permitting, my weekends on the slopes of [[https://agnarchy.com/wp-content/uploads/2016/08/Winter-Dual-Mountain-Village-Evening-Bluebird-Lights-DavidMcColm-26390.jpg][Whistler]].
 
