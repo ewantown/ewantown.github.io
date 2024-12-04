@@ -1,4 +1,4 @@
-#+Title: Ramblings
+#+Title: Thoughts
 #+Author: Ewan Townshend
 #+Options: toc:3 num:nil
 
