@@ -248,20 +248,33 @@ body[data-mode='dark'] {
     position: sticky;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
     background: var(--bg);
     color: var(--clr-code);
-    height: 3rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    height: 2.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     z-index: 100;
+    border-radius: 5px; /* Rounded corners */
 }
 #toggle-mode {
     position: absolute;
     right: 5%;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    background: var(--bg);
+    color: var(--clr-code);
+    padding: 0.25rem 0;
+}
+#goto-top {
+    display: none;
+}
+#goto-top[data-show="true"] {
+    position: relative;
     display: block;
     text-align: center;
     font-size: 1.5rem;
@@ -282,9 +295,11 @@ body[data-mode='dark'] {
     color: var(--clr-code);
     padding: 0.25rem 0;
 }
-#toggle-mode:hover,
-#toggle-toc:hover {
-  cursor: pointer;
+
+#toggle-toc:hover,
+#goto-top:hover,
+#toggle-mode:hover {
+    cursor: pointer;
 }
 
 #table-of-contents {
@@ -520,9 +535,6 @@ img {
 /* responsive layouts *********************************************************/
 
 @media only screen and (max-width: 768px) {
-    #view-controls {
-	padding-top: 1.5em;
-    }
     #toggle-toc[data-show='true'] {
 	padding-right: 5%;
     }
@@ -542,7 +554,8 @@ img {
 
 @media only screen and (max-width: 480px) {
     #view-controls {
-	padding-top: 2em;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
     }
     #toggle-toc[data-show='true'] {
 	padding-right: 5%;
@@ -582,7 +595,7 @@ img {
     <div class="separator"></div>
   </header>
 </div>
-</div><div id='view-controls'><div id='toggle-mode'>&#9788;</div><div id='toggle-toc'>&#9776;</div></div>
+</div><div id='view-controls'><div id='toggle-mode' title='Mode'>&#9788;</div><div id='goto-top' title='Top'>&#8962;</div><div id='toggle-toc' title='Contents'>&#9776;</div></div>
 </div>
 <div id="content" class="content">
 <h1 class="title">About Me</h1>
@@ -754,6 +767,7 @@ const preamble = document.getElementById("preamble");
 const header = document.getElementById("injected-header");
 const controls = document.getElementById("view-controls");
 const toggleTocBtn = document.getElementById("toggle-toc");
+const gotoTopBtn = document.getElementById("goto-top");
 const toggleModeBtn = document.getElementById("toggle-mode");
 const content = document.getElementById("content");
 const toc = document.getElementById("table-of-contents");
@@ -778,8 +792,19 @@ toggleModeBtn.addEventListener('click', () => {
   setMode(mode);
 })
 
-
+// Jump to top
 let scrollY = document.documentElement.scrollTop;
+window.addEventListener('scroll', () => {
+  let topHeight = header.offsetHeight + controls.offsetHeight;
+  let atTop = document.documentElement.scrollTop <= topHeight;
+  gotoTopBtn.dataset.show = !atTop + "";
+});
+gotoTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+})
 
 // Table-of-contents toggling
 if (toc) {
@@ -829,7 +854,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }, 0);
   });
 });
-
 
 function copyTextToClipboard(text) {
   // Make invisible textarea

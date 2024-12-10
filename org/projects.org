@@ -2,13 +2,4 @@
 #+Author: Ewan Townshend
 #+Options: toc:3 num:nil
 
-* nice-org-html
-
-* Guiser
-+ some stuff
-
-* search-factory
-+ some stuff
-
-* LifeInteractive
-+ some stuff
+Under construction.
