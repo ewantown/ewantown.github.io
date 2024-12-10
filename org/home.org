@@ -1,6 +1,6 @@
 #+Title: Home
 #+Author: Ewan Townshend
-#+Options: toc:nil ^:nil title:nil
+#+Options: toc:3 ^:nil title:nil
 
 
 #+BEGIN_EXPORT html
