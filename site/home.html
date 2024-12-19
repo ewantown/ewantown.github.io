@@ -170,44 +170,44 @@ body {
 /* custom facing **************************************************************/
 /* The variable values are injected by CSS pre-processing in et-org-html.el */
 :root {
-  --bc-tb: #3b2685;
-  --bc-block: initial;
-  --clr: #3b2685;
-  --clr-tb-hd: initial;
-  --clr-code: initial;
-  --bg: #fafafa;
-  --bg-code: #efeff1;
-  --bg-tb-hd: #efeff1;
-  --bg-block: #f4f4f4;
-  --clr-link: #005cc5;
-  --clr-title: #3b2685;
-  --clr-todo: #00afef;
+  --bc-tb: #b3b9be;
+  --bc-block: #da8b55;
+  --clr: #655370;
+  --clr-tb-hd: #655370;
+  --clr-code: #655370;
+  --bg: #fbf8ef;
+  --bg-code: #e7e5eb;
+  --bg-tb-hd: #e7e5eb;
+  --bg-block: #e8e3f0;
+  --clr-link: #4e3163;
+  --clr-title: #655370;
+  --clr-todo: #2d9574;
   --bg-todo: initial;
-  --clr-done: #778ca3;
-  --bg-done: initial;
-  --ts-clr: #009c9f;
+  --clr-done: #2aa1ae;
+  --bg-done: #ecf3ec;
+  --ts-clr: #3a81c3;
   --mg: 20px;
   --w-toc: 300px;
   --bg-keyword: initial;
-  --clr-keyword: #009c9f;
+  --clr-keyword: #3a81c3;
   --bg-constant: initial;
-  --clr-constant: #005cc5;
-  --bg-comment: initial;
-  --clr-comment: #778ca3;
+  --clr-constant: #4e3163;
+  --bg-comment: #ecf3ec;
+  --clr-comment: #2aa1ae;
   --bg-comment-delimiter: initial;
   --clr-comment-delimiter: initial;
   --bg-function: initial;
-  --clr-function: #fa1090;
+  --clr-function: #6c3163;
   --bg-variable: initial;
-  --clr-variable: #ff5200;
+  --clr-variable: #715ab1;
   --bg-preprocessor: initial;
-  --clr-preprocessor: #009c9f;
+  --clr-preprocessor: #6c3163;
   --bg-doc: initial;
-  --clr-doc: initial;
+  --clr-doc: #da8b55;
   --bg-builtin: initial;
-  --clr-builtin: #009c9f;
+  --clr-builtin: #3a81c3;
   --bg-string: initial;
-  --clr-string: #00afef;
+  --clr-string: #2d9574;
 }
 
 body[data-mode='light'] {
@@ -218,46 +218,51 @@ body[data-mode='light'] {
 body[data-mode='dark'] {
   background: var(--bg);
   color: var(--clr);
-  --bc-tb: #cccccc;
-  --bc-block: initial;
-  --clr: #cccccc;
-  --clr-code: #cccccc;
-  --clr-tb-hd: #cccccc;
-  --bg: #2d2d2d;
-  --bg-tb-hd: #515151;
-  --bg-code: #515151;
-  --bg-block: initial;
-  --clr-link: #66cccc;
-  --clr-title: #cccccc;
-  --clr-todo: #99cc99;
+  --bc-tb: #5d4d7a;
+  --bc-block: #9f8766;
+  --clr: #b2b2b2;
+  --clr-code: #b2b2b2;
+  --clr-tb-hd: #b2b2b2;
+  --bg: #292b2e;
+  --bg-tb-hd: #222226;
+  --bg-code: #222226;
+  --bg-block: #2f2b33;
+  --clr-link: #a45bad;
+  --clr-title: #b2b2b2;
+  --clr-todo: #2d9574;
   --bg-todo: initial;
-  --clr-done: #999999;
-  --bg-done: initial;
-  --ts-clr: #cc99cc;
+  --clr-done: #2aa1ae;
+  --bg-done: #292e34;
+  --ts-clr: #4f97d7;
   --mg: 20px;
   --w-toc: 300px;
   --bg-keyword: initial;
-  --clr-keyword: #cc99cc;
+  --clr-keyword: #4f97d7;
   --bg-constant: initial;
-  --clr-constant: #66cccc;
-  --bg-comment: initial;
-  --clr-comment: #999999;
+  --clr-constant: #a45bad;
+  --bg-comment: #292e34;
+  --clr-comment: #2aa1ae;
   --bg-comment-delimiter: initial;
-  --clr-comment-delimiter: #999999;
+  --clr-comment-delimiter: initial;
   --bg-function: initial;
-  --clr-function: #6699cc;
+  --clr-function: #bc6ec5;
   --bg-variable: initial;
-  --clr-variable: #f99157;
+  --clr-variable: #7590db;
   --bg-preprocessor: initial;
-  --clr-preprocessor: #cc99cc;
+  --clr-preprocessor: #bc6ec5;
   --bg-doc: initial;
-  --clr-doc: #999999;
+  --clr-doc: #9f8766;
   --bg-builtin: initial;
-  --clr-builtin: #66cccc;
+  --clr-builtin: #4f97d7;
   --bg-string: initial;
-  --clr-string: #99cc99;
+  --clr-string: #2d9574;
 }
 
+/* exceptions for badly rendering themes **************************************/
+body[data-theme='leuven'],
+body[data-theme='leuven-dark'] {
+    --bg-code: var(--bg-block);
+}
 
 /* ootb page layout ***********************************************************/
 #view-controls {
@@ -415,17 +420,6 @@ code {
   padding-right: 5px;
 }
 
-pre {
-    padding: 1rem;
-    border: 1px solid var(--bc-block);
-    border-radius: 0.5rem;
-    background: var(--bg-block);
-    font-size: 0.9rem;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: thin;
-}
-
 pre::-webkit-scrollbar {
   display: none;
 }
@@ -482,6 +476,22 @@ a:hover {
 
 img {
   max-width: 100%;
+}
+
+pre {
+    padding: 1rem;
+    border: 1px solid var(--bc-block);
+    border-radius: 0.5rem;
+    background: var(--bg-block);
+    font-size: 0.9rem;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+}
+
+pre.src {
+    border: none !important;
+    background: var(--bg-code) !important;
 }
 
 .org-src-wrapper {
@@ -601,7 +611,7 @@ img {
 <div style="width:100%; display:block;">
 <div style="max-width:300px; display:block; margin-left:auto; margin-right:auto;">
 
-<div id="org9254ca5" class="figure">
+<div id="org11284a1" class="figure">
 <p><img src="./images/headshot.jpg" alt="headshot.jpg" style="max-width:300px;" />
 </p>
 </div>
@@ -649,7 +659,9 @@ For more about me, head to <a href="./about.html">About</a>. For information abo
 </div>
 </div><script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
-document.cookie = 'theme-mode=dark'
+document.cookie = 'mode=dark'
+document.cookie = 'light=spacemacs-light'
+document.cookie = 'dark=spacemacs-dark'
 /*
 ;; nice-org-html.js
 ;;==============================================================================
@@ -691,14 +703,16 @@ const toc = document.getElementById("table-of-contents");
 document.body.insertBefore(controls, content);
 
 function setMode(mode) {
+  let thmCookie = document.cookie.split('; ').find(r => r.startsWith(mode));
   document.body.dataset.mode = mode;
+  document.body.dataset.theme = thmCookie ? thmCookie.split('=')[1] : 'unknown';
   toggleModeBtn.innerHTML = (mode === 'light') ? '&#9789;' : '&#9788;';
-  document.cookie = 'theme-mode=' + mode;
+  document.cookie = 'mode=' + mode;
 }
 
 // Set mode based on stored cookie
-let cookie = document.cookie.split('; ').find(r => r.startsWith('theme-mode'))
-let mode = cookie ? cookie.split('=')[1] : 'dark'; // Default
+let modeCookie = document.cookie.split('; ').find(r => r.startsWith('mode'))
+let mode = modeCookie ? modeCookie.split('=')[1] : 'dark'; // Default
 setMode(mode);
 
 // Mode toggling
