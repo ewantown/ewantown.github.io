@@ -9,169 +9,6 @@
 <meta name="generator" content="Org Mode" />
 <style type='text/css'>
 <!--/*--><![CDATA[/*><!--*/
-h2::before { content: '';
-margin-right: calc(0 * 0.22em);
-}
-h3::before { content: '';
-margin-right: calc(0 * 0.23em);
-}
-h4::before { content: '▷';
-margin-right: calc(4 * 0.24em);
-}
-h5::before { content: '';
-margin-right: calc(0 * 0.25em);
-}
-h6::before { content: '';
-margin-right: calc(0 * 0.26em);
-}
-#injected-header {
-    width: 100%;
-    line-height: 1;
-}
-#injected-footer {
-    width: 100%;    
-}
-
-.injected header {    
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.injected footer {
-    text-align: left;
-    width: 100%;
-}
-
-.injected nav {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.injected nav a {
-    display: inline;
-    color: var(--clr-title);
-}
-
-.injected nav a:hover {
-    color: var(--clr-link);
-}
-
-.injected .nav-title {
-    text-align: left;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all .15s ease-in;
-    text-transform: uppercase;
-    letter-spacing: .075rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.injected #nav-toggle {
-    display: none;
-}
-.injected .nav-button {
-    display: none;
-}
-
-.injected .menu-sep {
-    display: none;
-}
-
-.injected .nav-list {
-    display: inline;
-    float: right;    
-    list-style: none;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.injected .nav-item {
-    float: left;
-    margin: 0;
-    position: relative;
-}
-
-.injected .nav-link {
-    position: relative;
-    float: right;
-    margin: 0;
-}
-
-.injected .nav-link {
-    margin-left: 2rem;
-    margin-right: 0rem;
-    text-decoration: none;
-    transition: all .15s ease-in;
-}
-
-.injected .separator {
-    width: 100%;
-    height: 0.125rem;
-    background: var(--bg-code);
-    margin-top: 1rem;    
-}
-
-.injected address {
-    padding-left: 5%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;    
-}
-
-
-@media only screen and (max-width: 768px) {
-    .injected .nav-button {
-	display: inline;
-	position: relative;
-	float: right;
-	font-size: 1rem;
-    }
-    .injected .nav-button span::before {
-	display: inline-block;
-	content: '\2807';
-	font-size: 2rem;
-	transform: translateX(0.25rem) translateY(-0.5rem);
-	
-    }
-    .injected nav #nav-toggle:checked + label span::before {
-	transform: translateX(0.04rem) translateY(-0.25rem) rotate(90deg);
-    }    
-    .injected .nav-list {
-	position: relative;
-	display: none;
-	float: none !important;
-	z-index: 5;
-	width: 100%;
-	margin-top: 1rem;
-	padding-left: 0;
-	padding-right: 0;
-	opacity: 0;
-    }
-    .injected nav #nav-toggle:checked + label + .menu-sep {
-	display: block;
-	width: 100vw;
-	margin-left: -6%;
-	margin-right: -5%;
-	margin-bottom: 1rem;
-    }    
-    .injected nav #nav-toggle:checked + label ~ ul {
-	display: block;
-	opacity: 1;
-	max-height: 100rem;
-    }    
-    .injected .nav-item {
-	float: none !important;
-	text-align: center !important;
-    }
-    .injected .nav-link {
-	line-height: 2rem;
-	margin-left: 2rem;
-	margin-right: 2rem;
-	float: none !important;
-    }
-}
 /* nice-org-html.css
 ;;==============================================================================
 ;; Copyright (C) 2024, Ewan Townshend
@@ -658,38 +495,279 @@ pre.src {
     }
 }
 
+
+/* generated header and footer ************************************************/
+
+#generated-header,
+#generated-footer {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 1;
+}
+.generated header {
+    top: 0;
+    left: 0;
+}
+.generated footer {
+    bottom: 0;
+    left: 0;
+}
+.generated header a,
+.generated footer a {
+    display: inline;
+    color: var(--clr-title);
+    text-decoration: none;
+    transition: color .15s ease-in;
+}
+.generated header a:hover,
+.generated footer a:hover {
+    color: var(--clr-link);
+}
+
+.generated header nav {
+    position: relative;
+    margin-top: 1rem;
+    top: 0;
+    left: 0;
+}
+.generated footer nav {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.generated .separator {
+    display: block;
+    width: 111%;
+    margin-left: -5.5%;
+    max-width: 100vw;
+    height: 0.125rem;
+    background: var(--bg-code);
+}
+
+.generated a .nav-title,
+.generated a .nav-author {
+    display: inline;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-right: 10rem;
+}
+
+.generated .nav-title {
+    letter-spacing: .075rem;
+    font-weight: 500;
+}
+
+.generated .nav-toggle {
+    display: none;
+}
+.generated .nav-button {
+    display: none;
+}
+.generated .nav-list {
+    overflow-y: hidden;
+    display: block;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.generated .nav-item {
+    position: relative;
+    float: left;
+    margin: 0;
+}
+.generated .nav-link {
+    position: relative;
+    float: right;
+    margin-left: 2rem;
+    margin-right: 0rem;
+}
+
+.generated .nav-toggle {
+    max-height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+.generated header .separator {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.generated footer .separator {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.generated .menu-sep {
+    display: none;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.2s ease;
+}
+
+.generated footer {
+    padding-bottom: 1rem;
+}
+
+
+
+.generated.compact footer {
+    padding-bottom: 0;
+}
+
+.generated.compact header .separator {
+    margin-top: 0;
+    margin-bottom:0;
+}
+.generated.compact footer .separator {
+	margin-bottom: 1rem;
+}
+
+.generated.compact .nav-toggle {
+    visibility: visible;
+}
+
+.generated.compact .nav-toggle + label span::before {
+    transition: all 0.2s ease-in;
+}
+.generated.compact .nav-toggle:checked + label span::before {
+    transform: translateX(0.04rem) translateY(-0.25rem) rotate(90deg);
+    transition: all 0.2s ease;
+}
+
+.generated.compact .menu-sep {
+    display: flex;
+    max-height: 0rem;
+}
+.generated.compact .nav-toggle:checked + label + .menu-sep {
+    display: block;
+    position: relative;
+    max-height: 1rem;
+    transition: max-height 0.2s ease;
+}
+
+.generated.compact .nav-list {
+    float: none !important;
+    position: relative;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: max-height 0.2s ease;
+}
+.generated.compact .nav-toggle:checked + label ~ .nav-list {
+    display: block;
+    max-height: 100rem;
+    overflow-y: hidden;
+}
+.generated.compact header .nav-toggle:checked + label ~ .nav-list {
+    transition: max-height 0.2s ease;
+}
+
+.generated.compact .nav-button {
+    display: inline;
+    position: relative;
+    float: right;
+    font-size: 1rem;
+}
+.generated.compact .nav-button span::before {
+    display: inline-block;
+    content: '\2807';
+    font-size: 2rem;
+    transform: translateX(0.25rem) translateY(-0.5rem);
+}
+
+.generated.compact .nav-item {
+    float: none !important;
+    text-align: center !important;
+}
+.generated.compact .nav-link {
+    line-height: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    float: none !important;
+}
+
+.generated.compact footer .separator.menu-sep {
+    margin-bottom: -1rem;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.collapsible:hover {
+    cursor: pointer;
+}
+
+.collapsible.collapsed::after {
+    display: inline-block;
+    content: '...';
+}
+
+
+h6::before { content: '';
+margin-right: calc(0 * 0.26em);
+}
+h5::before { content: '';
+margin-right: calc(0 * 0.25em);
+}
+h4::before { content: '▷';
+margin-right: calc(4 * 0.24em);
+}
+h3::before { content: '';
+margin-right: calc(0 * 0.23em);
+}
+h2::before { content: '';
+margin-right: calc(0 * 0.22em);
+}
 /*]]>*/-->
 </style>
 </head>
 <body>
 <div id="preamble" class="status">
-<div id='injected-header' class='injected'><header>
-  <nav>
-    <a class="nav-title" href="home">
-      Ewan Townshend
-    </a>
-    <input id="nav-toggle" type="checkbox">
-    <label class="nav-button" for="nav-toggle">
-      <span/>
-    </label>
-    <div class="separator menu-sep"></div>
-    <ul class="nav-list">
-      <li class="nav-item">
-	<a href="about" class="nav-link">About</a>
-      </li>
-      <li class="nav-item">
-	<a href="projects" class="nav-link">Projects</a>
-      </li>
-      <li class="nav-item">
-	<a href="thoughts" class="nav-link">Thoughts</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="separator"></div>  
+<div id='generated-header' class='generated'><header>
+ <nav>
+<a class='nav-title'href='home' >
+Ewan Townshend
+</a>
+<input id='nav-toggle-top' class='nav-toggle' type='checkbox'>
+<label class='nav-button' for='nav-toggle-top'><span/></label>
+<div class='separator menu-sep'></div>
+<ul class='nav-list'>
+<li class='nav-item'>
+<a class='nav-link' href='about'>
+About</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='projects'>
+Projects</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='thoughts'>
+Thoughts</a>
+</li>
+</ul>
+<div class='separator'></div>
+</nav>
 </header>
-
-
-</div><div id='view-controls'><div id='toggle-mode' title='Mode'>&#9788;</div><div id='goto-top' title='Top'>&#8963;</div><div id='toggle-toc' title='Contents'>&#9776;</div></div>
+</div>
+<div id='view-controls'><div id='toggle-mode' title='Mode'>&#9788;</div><div id='goto-top' title='Top'>&#8963;</div><div id='toggle-toc' title='Contents'>&#9776;</div></div>
 </div>
 <div id="content" class="content">
 <h1 class="title">Sitemap</h1>
@@ -702,16 +780,33 @@ pre.src {
 </ul>
 </div>
 <div id="postamble" class="status">
-<div id='injected-footer' class='injected'><div>
-  <div class="separator"></div>
-  <footer>
-    <address>
-      <div id="copywrite">&#9400;
-	<a href="mailto:ewan@etown.dev"> Ewan Townshend </a>
-    </address>
-  </footer>
+<div id='generated-footer' class='generated'><footer>
+ <nav>
+<div class='separator'></div>
+<span class='nav-author'>
+© 2025
+</span>
+<input id='nav-toggle-bot' class='nav-toggle' type='checkbox'>
+<label class='nav-button' for='nav-toggle-bot'><span/></label>
+<div class='separator menu-sep'></div>
+<ul class='nav-list'>
+<li class='nav-item'>
+<a class='nav-link' href='mailto:ewan@etown.dev'>
+Email</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='https://www.linkedin.com/in/ewan-townshend'>
+LinkedIn</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='file:./other/sw-resume.pdf'>
+Resumé</a>
+</li>
+</ul>
+</nav>
+</footer>
 </div>
-</div><script type="text/javascript">
+<script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
 if (!document.cookie.split('; ').find(r => r.startsWith('mode'))) {
 document.cookie = 'mode=dark'
@@ -748,12 +843,26 @@ document.cookie = 'dark=spacemacs-dark'
  */
 
 const preamble = document.getElementById("preamble");
+const content = document.getElementById("content");
+const postamble = document.getElementById("postamble");
+
 const controls = document.getElementById("view-controls");
 const toggleTocBtn = document.getElementById("toggle-toc");
 const gotoTopBtn = document.getElementById("goto-top");
 const toggleModeBtn = document.getElementById("toggle-mode");
-const content = document.getElementById("content");
 const toc = document.getElementById("table-of-contents");
+
+// Get and parse options passed in cookie string
+const optCookie = document.cookie.split('; ').find(r => r.startsWith('options'));
+const options = {};
+if (optCookie) {
+  optCookie.split('=')[1].split('__').forEach(pair => {
+    const [key, val] = pair.split(':');
+    if (key && val) {
+      options[key] = val;
+    }
+  })
+}
 
 // Move sticky control bar (injected within preamble)
 document.body.insertBefore(controls, content);
@@ -776,7 +885,7 @@ function setMode(mode) {
 let mode = getMode();
 if (mode && ["light", "dark"].includes(mode)) {
   setMode(mode);
-} else {
+} else {  
   let prop = "prefers-color-scheme";
   let pref = (mode === "query") && window.matchMedia &&
     ["light", "dark"].find(s => window.matchMedia(`(${prop}: ${s})`).matches);
@@ -886,6 +995,106 @@ function copyTextToClipboard(text) {
   return res;
 }
 
+// Handle the default header / footer drawers
+const header = document.getElementById("generated-header");
+const footer = document.getElementById("generated-footer");
+
+if (header) {
+  let toggle = header.querySelector("header nav input.nav-toggle");
+  if (toggle) { toggle.checked = false; }
+}
+if (footer) {
+  let nav = footer.querySelector("nav");
+  let toggle = nav && nav.querySelector(".nav-toggle");
+  let navList = nav && nav.querySelector(".nav-list");
+  let navElem = navList && [...navList.querySelectorAll(".nav-item")];
+  let numLink = navElem && navElem.length;
+  if (numLink) {
+    toggle.checked = false;
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+	setTimeout(() => window.scrollTo({
+	  behavior: 'smooth',
+	  top: document.body.scrollHeight	  
+	}), 88);
+      }
+   });
+  }
+}
+
+function autoCompact() {
+  var anchor, links, overlap, trivial;
+  const domCompute = (node) => {
+    if (node) {
+      anchor = node.querySelector('.nav-title, .nav-author');
+      links = node.querySelector('.nav-list');
+      overlap = links.offsetLeft - 5 <= anchor.offsetLeft + anchor.offsetWidth;	
+      trivial = links.offsetLeft === anchor.offsetLeft;
+    }
+  };
+  let mediaMatch = window.matchMedia('(max-width: 768px)').matches;
+  [header, footer].forEach(e => {
+    if (e) {
+      if (mediaMatch) {
+	e.classList.add('compact');
+      } else {
+	domCompute(e);
+	if (overlap && !trivial) {
+	  e.classList.add('compact');
+	} else {	
+	  let clone = e.cloneNode(true);
+	  clone.style.top = '-2000px';
+	  clone.style.maxHeight = '0px';
+	  clone.classList.remove('compact');
+	  e.parentNode.insertBefore(clone, e);
+	  domCompute(clone);
+	  let toggle = e.querySelector('.nav-toggle');
+	  if (!overlap && toggle && !toggle.checked) {
+	    e.classList.remove('compact');
+	  }
+	  e.parentNode.removeChild(clone);
+	}
+      }
+    }
+  })
+}
+
+if ((header || footer)) {
+  if (options.hasOwnProperty('layout')) {
+    [header, footer].forEach(e => e ? e.classList.add(options.layout) : null);
+  } else {
+    autoCompact();
+    window.addEventListener('resize', autoCompact);
+  }
+}
+
+
+if (options.hasOwnProperty('collapsing') && options.collapsing == 't') {
+  let levels = [2, 3, 4, 5, 6];
+  let containerPrefix = 'outline-container-';
+  levels.forEach(l => {
+    let containers = [...document.querySelectorAll(`.outline-${l}`)];
+    containers.forEach(c => {
+      let id = c.id.slice(containerPrefix.length);
+      let headline = document.getElementById(id);
+      let siblings = [...c.children].filter(child => child.id != id);
+      headline.classList.add('collapsible');
+      headline.addEventListener('click', () => {	
+	if (headline.classList.contains('collapsed')) {
+	  headline.classList.remove('collapsed');
+	  siblings.forEach(child => {
+	    child.classList.remove('hidden');
+	  });	  
+	} else {
+	  headline.classList.add('collapsed');
+	  siblings.forEach(child => {
+	    child.classList.add('hidden');
+	  });
+	}
+      })
+    })
+  })
+}
 /*]]>*/-->
 </script><div hidden>Generated by: https://github.com/ewantown/nice-org-html</div>
 </div>
