@@ -3,3 +3,5 @@
 #+Options: toc:3 num:nil
 
 Under construction.
+
+In the meantime, for a philosophical sample, here's a recent paper on /[[/other/inference.pdf][inference]]/.
