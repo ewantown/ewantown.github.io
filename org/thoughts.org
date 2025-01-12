@@ -4,4 +4,4 @@
 
 Under construction.
 
-In the meantime, for a philosophical sample, here's a recent paper on /[[/other/inference.pdf][inference]]/.
+In the meantime, for a philosophical sample, here's a recent paper on /[[./other/inference.pdf][inference]]/.
