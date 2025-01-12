@@ -771,9 +771,81 @@ Thoughts</a>
 </div>
 <div id="content" class="content">
 <h1 class="title">Projects</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb206c10">nice-org-html</a></li>
+<li><a href="#org70b2264">Guiser</a></li>
+<li><a href="#orgc9ae7e1">search-factory</a></li>
+<li><a href="#orgdecd1dd">LifeInteractive</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb206c10" class="outline-2">
+<h2 id="orgb206c10"><a href="https://github.com/ewantown/nice-org-html">nice-org-html</a></h2>
+<div class="outline-text-2" id="text-orgb206c10">
 <p>
-Under construction.
+This is an Emacs package (available on <a href="https://melpa.org/#/nice-org-html">Melpa</a>) that generates pretty static websites from <a href="https://orgmode.org/guide/Markup.html">Org Mode markup</a> files and user-chosen Emacs themes. Emacs has a built-in mechanism for exporting .org files and publishing projects comprised of linked .org files, but this mechanism generates very basic HTML, with an outdated appearance when rendered in the browser. This package addresses that shortcoming, in part by leveraging the variety of open-source themes available for Emacs, and in part by using schematic s-expressions to complete HTML component templates. The package provides an Org Export backend, a publishing function, and a publishing-function-generating macro, which enable users to customize the look-and-feel of generated web pages by just specifying values for parameters. This package is used, together with the built-in <a href="https://www.gnu.org/software/emacs/manual/html_node/org/Publishing.html">publisher</a>, to generate the website you are viewing now. Customization is achieved by a single macro call:
 </p>
+
+<div class='org-src-wrapper'>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: var(--clr-function); background-color: var(--bg-keyword);">nice-org-html-publishing-function</span>
+ <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:theme-alist</span>
+ ((dark . spacemacs-dark) (light . spacemacs-light))
+ <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:default-mode</span> dark
+ <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:headline-bullets</span> (<span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:h1</span> <span style="color: var(--clr-string); background-color: var(--bg-string);">""</span> <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:h2</span> <span style="color: var(--clr-string); background-color: var(--bg-string);">""</span> <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:h3</span> <span style="color: var(--clr-string); background-color: var(--bg-string);">"&#9655;"</span> <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:h4</span> <span style="color: var(--clr-string); background-color: var(--bg-string);">""</span> <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:h5</span> <span style="color: var(--clr-string); background-color: var(--bg-string);">""</span>)
+ <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:header</span>
+ ((<span style="color: var(--clr-string); background-color: var(--bg-string);">"Ewan Townshend"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"home"</span>)
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"About"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"about"</span>)
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"Projects"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"projects"</span>)
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"Thoughts"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"thoughts"</span>))
+ <span style="color: var(--clr-builtin); background-color: var(--bg-builtin);">:footer</span>
+ ((<span style="color: var(--clr-string); background-color: var(--bg-string);">"&#169; 2025"</span> . nil)                              
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"LinkedIn"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"https://www.linkedin.com/in/ewan-townshend"</span>)
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"GitHub"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"https://github.com/ewantown"</span>)
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"Resum&#233;"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"other/sw-resume.pdf"</span>)
+  (<span style="color: var(--clr-string); background-color: var(--bg-string);">"Email"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"mailto:ewan@etown.dev"</span>)))
+</pre>
+</div><button class='copyBtn' name=btn_a6e8e71ad84140ffa1d8d109c3d7e3ef>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_a6e8e71ad84140ffa1d8d109c3d7e3ef=document.querySelector('button[name=btn_a6e8e71ad84140ffa1d8d109c3d7e3ef]');
+copyBtnbtn_a6e8e71ad84140ffa1d8d109c3d7e3ef.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(nice-org-html-publishing-function\n :theme-alist\n ((dark . spacemacs-dark) (light . spacemacs-light))\n :default-mode dark\n :headline-bullets (:h1 \"\" :h2 \"\" :h3 \"▷\" :h4 \"\" :h5 \"\")\n :header\n ((\"Ewan Townshend\" . \"home\")\n  (\"About\" . \"about\")\n  (\"Projects\" . \"projects\")\n  (\"Thoughts\" . \"thoughts\"))\n :footer\n ((\"© 2025\" . nil)				\n  (\"LinkedIn\" . \"https://www.linkedin.com/in/ewan-townshend\")\n  (\"GitHub\" . \"https://github.com/ewantown\")\n  (\"Resumé\" . \"other/sw-resume.pdf\")\n  (\"Email\" . \"mailto:ewan@etown.dev\")))\n`);copyBtnbtn_a6e8e71ad84140ffa1d8d109c3d7e3ef.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_a6e8e71ad84140ffa1d8d109c3d7e3ef.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org70b2264" class="outline-2">
+<h2 id="org70b2264"><a href="https://github.com/ewantown/guiser">Guiser</a></h2>
+<div class="outline-text-2" id="text-org70b2264">
+<p>
+This is a web application enabling users to design multiple “personas”, and generate and post social media content under the guise of a persona to associated accounts on major social media platforms (LinkedIn, Twitter / X, and Threads). The intent of Guiser was three-fold. On one hand, it is a useful tool for social media marketing, enabling a single marketing professional to masquerade as numerous “organic” content creators. On the other hand, its creation was a prescient commentary on the direction of social media in the wake of programmatically accessible large language models. Finally, as a project, it provided an opportunity to work with technologies that comprise the “backbone” of modern web applications with increasing frequency. In this regard, the application was written in JavaScript and TypeScript, uses the MERN stack, and has four OAuth integrations (Google, LinkedIn, Meta, Twitter/X), five external REST API integrations (LinkedIn, Meta, Twitter/X, MongoDB Atlas), and one internal REST API to handle client-server transactions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9ae7e1" class="outline-2">
+<h2 id="orgc9ae7e1"><a href="https://github.com/ewantown/search-factory">search-factory</a></h2>
+<div class="outline-text-2" id="text-orgc9ae7e1">
+<p>
+This is a Racket library providing very general data structures for defining problems with graphs, and higher-order functions that produce deterministic and stochastic graph search functions to client specifications. The library abstracts away points of variance among graph search procedures, including many outlined in Russell and Norvig's <i>Artificial Intelligence: A Modern Approach</i>, as functions passed as closures to more general parameterized search procedure constructors. Use of the library facillitates fine-grained specification of strategies for solving basic tree and graph search problems, constraint satisfaction problems (including 3SAT, etc.), and optimization problems, all within a unified framework.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdecd1dd" class="outline-2">
+<h2 id="orgdecd1dd"><a href="https://github.com/ewantown/LifeInteractive">LifeInteractive</a></h2>
+<div class="outline-text-2" id="text-orgdecd1dd">
+<p>
+This is a Java implementation of a novel single-player game based on Conway's zero-player <i>Game of Life</i> (a cellular automaton). The non-existence of this variant on Conway's game was a conceptual itch I wanted to scratch. The idea is that a user interacts with a grid of cells ("lifeform") evolving "naturally" from an initial state in accordance with the rules of Conway's game, by controlling an avatar that moves about the grid firing "bullets" and "seeds". If a bullet collides with a live cell, the user gains a point, and the cell is killed, thus influencing evolution of the lifeform. Firing a seed costs the user a point, but if the seed collides with a live cell, a new cell spawns at the point of collision, thus influencing evolution of the lifeform. As a result of these rules, a user's score is maximized by behaviour that "cultivates" the lifeform, rather than extinguishing it. The choice of Java for implementation was due to the relative ease of developing a platform-independent desktop GUI for interacting with a lifeform. The interactive form of the game, with an '80s arcade aesthetic, turned out to actually be quite fun. But more generally, the intent of the program was to serve as a visualized "sandbox" for tinkering with programmatically controlled gameplaying agents.
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <div id='generated-footer' class='generated'><footer>
