@@ -1,7 +1,6 @@
 #+TITLE: Sitemap
 
+- [[file:about.org][About Me]]
 - [[file:home.org][Home]]
-- [[file:thoughts.org][Ramblings]]
-- [[file:test.org][Title]]
-- [[file:about.org][about]]
-- [[file:projects.org][projects]]
+- [[file:projects.org][Projects]]
+- [[file:thoughts.org][Thoughts]]

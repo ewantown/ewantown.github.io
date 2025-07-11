@@ -40,7 +40,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 html {
     font-family: Sans;
@@ -89,92 +89,102 @@ body {
 /* custom facing **************************************************************/
 /* The variable values are injected by CSS pre-processing in et-org-html.el */
 :root {
-  --bc-tb: #b3b9be;
-  --bc-block: #da8b55;
-  --clr: #655370;
-  --clr-tb-hd: #655370;
-  --clr-code: #655370;
-  --bg: #fbf8ef;
-  --bg-code: #e7e5eb;
-  --bg-tb-hd: #e7e5eb;
-  --bg-block: #e8e3f0;
-  --clr-link: #4e3163;
-  --clr-title: #655370;
-  --clr-todo: #2d9574;
-  --bg-todo: initial;
-  --clr-done: #2aa1ae;
-  --bg-done: #ecf3ec;
-  --ts-clr: #3a81c3;
-  --mg: 20px;
-  --w-toc: 300px;
-  --bg-keyword: initial;
-  --clr-keyword: #3a81c3;
-  --bg-constant: initial;
-  --clr-constant: #4e3163;
-  --bg-comment: #ecf3ec;
-  --clr-comment: #2aa1ae;
-  --bg-comment-delimiter: initial;
-  --clr-comment-delimiter: initial;
-  --bg-function: initial;
-  --clr-function: #6c3163;
-  --bg-variable: initial;
-  --clr-variable: #715ab1;
-  --bg-preprocessor: initial;
-  --clr-preprocessor: #6c3163;
-  --bg-doc: initial;
-  --clr-doc: #da8b55;
-  --bg-builtin: initial;
-  --clr-builtin: #3a81c3;
-  --bg-string: initial;
-  --clr-string: #2d9574;
+    --bc-tb: #b3b9be;
+    --bc-block: #da8b55;
+    --clr: #655370;
+    --clr-tb-hd: #655370;
+    --clr-code: #655370;
+    --bg: #fbf8ef;
+    --bg-code: #e7e5eb;
+    --bg-tb-hd: #e7e5eb;
+    --bg-block: #e8e3f0;
+    --clr-link: #4e3163;
+    --clr-title: #655370;
+    --clr-todo: #2d9574;
+    --bg-todo: initial;
+    --clr-done: #2aa1ae;
+    --bg-done: #ecf3ec;
+    --ts-clr: #3a81c3;
+    --mg: 20px;
+    --w-toc: 300px;
+    --bg-keyword: initial;
+    --clr-keyword: #3a81c3;
+    --bg-constant: initial;
+    --clr-constant: #4e3163;
+    --bg-comment: #ecf3ec;
+    --clr-comment: #2aa1ae;
+    --bg-comment-delimiter: initial;
+    --clr-comment-delimiter: initial;
+    --bg-function: initial;
+    --clr-function: #6c3163;
+    --bg-variable: initial;
+    --clr-variable: #715ab1;
+    --bg-preprocessor: initial;
+    --clr-preprocessor: #6c3163;
+    --bg-doc: initial;
+    --clr-doc: #da8b55;
+    --bg-builtin: initial;
+    --clr-builtin: #3a81c3;
+    --bg-string: initial;
+    --clr-string: #2d9574;
+    --clr-note: #0969da;
+    --clr-tip: #1a7f37;
+    --clr-important: #8250df;
+    --clr-warning: #9a6700;
+    --clr-caution: #cf222e;
 }
 
 body[data-mode='light'] {
-  background: var(--bg);
-  color: var(--clr);
+    background: var(--bg);
+    color: var(--clr);
 }
 
 body[data-mode='dark'] {
-  background: var(--bg);
-  color: var(--clr);
-  --bc-tb: #5d4d7a;
-  --bc-block: #9f8766;
-  --clr: #b2b2b2;
-  --clr-code: #b2b2b2;
-  --clr-tb-hd: #b2b2b2;
-  --bg: #292b2e;
-  --bg-tb-hd: #222226;
-  --bg-code: #222226;
-  --bg-block: #2f2b33;
-  --clr-link: #a45bad;
-  --clr-title: #b2b2b2;
-  --clr-todo: #2d9574;
-  --bg-todo: initial;
-  --clr-done: #2aa1ae;
-  --bg-done: #292e34;
-  --ts-clr: #4f97d7;
-  --mg: 20px;
-  --w-toc: 300px;
-  --bg-keyword: initial;
-  --clr-keyword: #4f97d7;
-  --bg-constant: initial;
-  --clr-constant: #a45bad;
-  --bg-comment: #292e34;
-  --clr-comment: #2aa1ae;
-  --bg-comment-delimiter: initial;
-  --clr-comment-delimiter: initial;
-  --bg-function: initial;
-  --clr-function: #bc6ec5;
-  --bg-variable: initial;
-  --clr-variable: #7590db;
-  --bg-preprocessor: initial;
-  --clr-preprocessor: #bc6ec5;
-  --bg-doc: initial;
-  --clr-doc: #9f8766;
-  --bg-builtin: initial;
-  --clr-builtin: #4f97d7;
-  --bg-string: initial;
-  --clr-string: #2d9574;
+    background: var(--bg);
+    color: var(--clr);
+    --bc-tb: #5d4d7a;
+    --bc-block: #9f8766;
+    --clr: #b2b2b2;
+    --clr-code: #b2b2b2;
+    --clr-tb-hd: #b2b2b2;
+    --bg: #292b2e;
+    --bg-tb-hd: #222226;
+    --bg-code: #222226;
+    --bg-block: #2f2b33;
+    --clr-link: #a45bad;
+    --clr-title: #b2b2b2;
+    --clr-todo: #2d9574;
+    --bg-todo: initial;
+    --clr-done: #2aa1ae;
+    --bg-done: #292e34;
+    --ts-clr: #4f97d7;
+    --mg: 20px;
+    --w-toc: 300px;
+    --bg-keyword: initial;
+    --clr-keyword: #4f97d7;
+    --bg-constant: initial;
+    --clr-constant: #a45bad;
+    --bg-comment: #292e34;
+    --clr-comment: #2aa1ae;
+    --bg-comment-delimiter: initial;
+    --clr-comment-delimiter: initial;
+    --bg-function: initial;
+    --clr-function: #bc6ec5;
+    --bg-variable: initial;
+    --clr-variable: #7590db;
+    --bg-preprocessor: initial;
+    --clr-preprocessor: #bc6ec5;
+    --bg-doc: initial;
+    --clr-doc: #9f8766;
+    --bg-builtin: initial;
+    --clr-builtin: #4f97d7;
+    --bg-string: initial;
+    --clr-string: #2d9574;
+    --clr-note: #0969da;
+    --clr-tip: #1a7f37;
+    --clr-important: #8250df;
+    --clr-warning: #9a6700;
+    --clr-caution: #cf222e;
 }
 
 /* exceptions for badly rendering themes **************************************/
@@ -256,7 +266,7 @@ body[data-theme='leuven-dark'] {
 }
 
 #table-of-contents::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 body[data-toc="true"] #content * {
@@ -271,13 +281,13 @@ body[data-toc="true"] #content #table-of-contents * {
 /* misc elements **************************************************************/
 
 hr {
-	height: 0;
-	color: inherit;
+    height: 0;
+    color: inherit;
 }
 
 b,
 strong {
-	font-weight: bolder;
+    font-weight: bolder;
 }
 
 code,
@@ -294,37 +304,37 @@ pre {
 }
 
 small {
-	font-size: 80%;
+    font-size: 80%;
 }
 
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sub {
-	bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-	top: -0.5em;
+    top: -0.5em;
 }
 
 table {
-	text-indent: 0;
-	border-color: inherit;
+    text-indent: 0;
+    border-color: inherit;
 }
 
 summary {
-	display: list-item;
+    display: list-item;
 }
 
 h1 {
-  color: var(--clr-title);
-  text-align: center;
+    color: var(--clr-title);
+    text-align: center;
 }
 h2 {
     margin-top: 2rem;
@@ -332,44 +342,44 @@ h2 {
 }
 
 code {
-  color: var(--clr-code);
-  background: var(--bg-code);
-  border-radius: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: var(--clr-code);
+    background: var(--bg-code);
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 pre::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .todo {
-  color: var(--clr-todo);
-  background: var(--bg-todo);
+    color: var(--clr-todo);
+    background: var(--bg-todo);
 }
 
 .done {
-  color: var(--clr-done);
-  background: var(--bg-done);
+    color: var(--clr-done);
+    background: var(--bg-done);
 }
 
 .timestamp-wrapper {
-  font-size: 0.8rem;
-  color: var(--clr-ts);
+    font-size: 0.8rem;
+    color: var(--clr-ts);
 }
 
 table {
-  width: 100%;
-  border: 2px solid var(--bc-tb);
+    width: 100%;
+    border: 2px solid var(--bc-tb);
 }
 
 thead {
-  color: var(--clr-tb-hd);
-  background: var(--bg-tb-hd);
+    color: var(--clr-tb-hd);
+    background: var(--bg-tb-hd);
 }
 
 td, th {
-  border: thin solid var(--bc-tb);
+    border: thin solid var(--bc-tb);
 }
 
 li {
@@ -381,20 +391,20 @@ li {
 }
 
 a {
-  text-decoration: none;
-  color: var(--clr-link);
+    text-decoration: none;
+    color: var(--clr-link);
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .MathJax_Display {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 pre {
@@ -408,55 +418,78 @@ pre {
     scrollbar-width: thin;
 }
 
-pre.src {
-    border: none !important;
-    background: var(--bg-code) !important;
-}
-
 .org-src-wrapper {
-  position: relative;
-}
-
-.org-src-wrapper .org-src-container {
     position: relative;
     border: 1px solid var(--bc-block);
     border-radius: 0.5rem;
     background: var(--bg-code);
 }
 
-.org-src-wrapper .org-src-container:has(+ .copyBtn) pre {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.org-src-wrapper .srcBtnBar {
-    width: 100%;
-    background: transparent;
+.org-src-bar {
     position: relative;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
+    top: 0rem;
+    width: 100%;
+    background: var(--bg-code);
+    border-radius: 0.5rem;
+    text-align: right;
+    min-height: 1rem;
 }
 
-.org-src-wrapper .copyBtn {
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  background-color: transparent;
-  color: var(--clr-doc);
-  border: none;
-  padding: 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.8rem;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.3s;
+.org-src-wrapper .org-src-container {
+    position: relative;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--bg-code);
+    z-index: 0;
+}
+
+.org-src-wrapper .org-src-container pre.src {
+    border: none !important;
+    background: var(--bg-code) !important;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1.6rem;
+}
+
+.org-src-wrapper .org-src-bar .srcLangLabel {
+    top: 0rem;
+    right: 1.6rem;
+    background-color: transparent;
+    color: var(--clr-doc);
+    border: none;
+    padding: 0.5rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    z-index: 1;
+    display: none;
+}
+
+.org-src-wrapper .org-src-bar .copyBtn {
+    top: 0rem;
+    right: 0.1rem;
+    background-color: transparent;
+    color: var(--clr-doc);
+    border: none;
+    padding: 0.5rem;
+    padding-right: 0.7rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 1;
+    transition: opacity 0.3s;
 }
 
 .org-src-wrapper .copyBtn:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .org-src-wrapper .copyBtn i {
@@ -464,7 +497,114 @@ pre.src {
     padding: 0.5rem;
 }
 
+.admonition {
+    margin: 0.2rem;
+    color: inherit;
+    border-left: .25rem solid;
+}
+.admonition-title {
+    margin: 0 0 0.5rem 0.5rem;
+    padding: 0.5rem 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.admonition-content > p {
+    margin: 0.5rem 0 0 0.5rem;
+    padding: 0 0 0.5rem 0;
+}
 
+.admonition.note {
+    border-left-color: var(--clr-note);
+}
+.admonition-title.note {
+    color: var(--clr-note);
+}
+.admonition-title.note:before {
+    content: '';
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--clr-note);
+    mask-size: cover;    
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="false"><path class="admonition-icon-note" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>');    
+}
+.admonition-icon-note {
+    fill: var(--clr-note);
+}
+
+.admonition.tip {
+    border-left-color: var(--clr-tip);
+}
+.admonition-title.tip {
+    color: var(--clr-tip);
+}
+.admonition-title.tip:before {
+    content: '';
+    fill: var(--clr-tip);    
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--clr-tip);
+    mask-size: cover;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="false"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>');    
+}
+
+.admonition.important {
+    border-left-color: var(--clr-important);
+}
+.admonition-title.important {
+    color: var(--clr-important);
+}
+.admonition-title.important:before {
+    content: '';
+    fill: var(--clr-important);    
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--clr-important);
+    mask-size: cover;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="false"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>');    
+}
+
+.admonition.warning {
+    border-left-color: var(--clr-warning);
+}
+.admonition-title.warning {
+    color: var(--clr-warning);
+}
+.admonition-title.warning:before {
+    content: '';
+    color: var(--clr-warning);    
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--clr-warning);
+    mask-size: cover;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="false"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>');
+}
+
+
+.admonition.caution {
+    border-left-color: var(--clr-caution);
+}
+.admonition-title.caution {
+    color: var(--clr-caution);
+}
+.admonition-title.caution:before {
+    content: '';
+    fill: var(--clr-caution);    
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--clr-caution);
+    mask-size: cover;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="false"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>');    
+}
 /* responsive layouts *********************************************************/
 
 @media only screen and (max-width: 768px) {
@@ -568,9 +708,6 @@ pre.src {
 .generated .nav-list {
     overflow-y: hidden;
     display: block;
-    /*display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;*/
     float: right;
     list-style: none;
     margin-bottom: 0;
@@ -616,8 +753,6 @@ pre.src {
     padding-bottom: 1rem;
 }
 
-
-
 .generated.compact footer {
     padding-bottom: 0;
 }
@@ -627,7 +762,7 @@ pre.src {
     margin-bottom:0;
 }
 .generated.compact footer .separator {
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .generated.compact .nav-toggle {
@@ -705,8 +840,6 @@ pre.src {
     margin-bottom: -1rem;
 }
 
-
-
 .hidden {
     display: none;
 }
@@ -719,8 +852,6 @@ pre.src {
     display: inline-block;
     content: '...';
 }
-
-
 h6::before { content: '';
 margin-right: calc(0 * 0.26em);
 }
@@ -775,35 +906,35 @@ Thoughts</a>
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgec0bef4">Education</a>
+<li><a href="#orgb50e460">Education</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org1d065e9">Bachelor of Arts (Hon.) in Anthropology and Philosophy</a></li>
-<li><a href="#org65bada5">Master of Arts (Ths.) in Philosophy</a></li>
-<li><a href="#org7f0c4a7">Bachelor of Computer Science</a></li>
+<li><a href="#org0496df8">Bachelor of Arts (Hon.) in Anthropology and Philosophy</a></li>
+<li><a href="#orgd1851a5">Master of Arts (Ths.) in Philosophy</a></li>
+<li><a href="#org147b129">Bachelor of Computer Science</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org753c8c9">Interests</a>
+<li><a href="#org1f87fdf">Interests</a>
 <ul>
 <li>
 <ul>
-<li><a href="#orgebb32ea">Philosophy</a></li>
-<li><a href="#orgc657cc4">Non-classical logics</a></li>
-<li><a href="#org79b7736">Programming language theory</a></li>
-<li><a href="#orgee46c7e">(Mostly "Good ol' fashioned") A.I.</a></li>
+<li><a href="#orge47ea39">Philosophy</a></li>
+<li><a href="#org797ad9c">Non-classical logics</a></li>
+<li><a href="#orge75f3e2">Programming language theory</a></li>
+<li><a href="#org62cc559">(Mostly "Good ol' fashioned") A.I.</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orge33b139">Recreation</a>
+<li><a href="#org13968e7">Recreation</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org9247af8">Snowboarding</a></li>
-<li><a href="#org03b6418">Boxing</a></li>
+<li><a href="#org19834aa">Snowboarding</a></li>
+<li><a href="#orgd5154bd">Boxing</a></li>
 </ul>
 </li>
 </ul>
@@ -811,46 +942,42 @@ Thoughts</a>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgec0bef4" class="outline-2">
-<h2 id="orgec0bef4">Education</h2>
-<div class="outline-text-2" id="text-orgec0bef4">
+<div id="outline-container-orgb50e460" class="outline-2">
+<h2 id="orgb50e460">Education</h2>
+<div class="outline-text-2" id="text-orgb50e460">
 </div>
-<div id="outline-container-org1d065e9" class="outline-4">
-<h4 id="org1d065e9">Bachelor of Arts (Hon.) in Anthropology and Philosophy</h4>
-<div class="outline-text-4" id="text-org1d065e9">
+<div id="outline-container-org0496df8" class="outline-4">
+<h4 id="org0496df8">Bachelor of Arts (Hon.) in Anthropology and Philosophy</h4>
+<div class="outline-text-4" id="text-org0496df8">
 <p>
 I began post-secondary studies in 2012 at the <a href="https://en.wikipedia.org/wiki/University_of_Lethbridge">University of Lethbridge</a>. There I was able to take a wide variety of courses before declaring a major. I cut a swathe through the humanities, social sciences, psychology and ecology, before settling on a double major in anthropology and philosophy. My research interests surrounded human cognition, and I completed a pair of capstone projects. The anthropological capstone, "Doing with Sound", supervised by <a href="https://directory.uleth.ca/users/james.mackenzie">Jamie MacKenzie</a>, deployed the semiotic taxonomy of philosopher <a href="https://plato.stanford.edu/entries/peirce/">C.S. Peirce</a> in analyzing linguistic practices of some Amazonian societies, esp. in contexts of hunting and ritual &#x2013; an approach championed by <a href="https://www.mcgill.ca/anthropology/people/eduardokohn">Eduardo Kohn</a>. The philosophical capstone, "Sellars on the Nature of Mental Events", supervised by <a href="https://directory.uleth.ca/users/brown">Bryson Brown</a>, elaborated on <a href="https://plato.stanford.edu/entries/sellars/">Wilfrid Sellars</a>' approach to <a href="https://plato.stanford.edu/entries/intentionality/">intentionality</a> ("aboutness"), with the aim of clarifying some misunderstandings in the <a href="https://www.ditext.com/sellars/sccor-f.html">Sellars-Chisholm Correspondence</a>.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org65bada5" class="outline-4">
-<h4 id="org65bada5">Master of Arts (Ths.) in Philosophy</h4>
-<div class="outline-text-4" id="text-org65bada5">
+<div id="outline-container-orgd1851a5" class="outline-4">
+<h4 id="orgd1851a5">Master of Arts (Ths.) in Philosophy</h4>
+<div class="outline-text-4" id="text-orgd1851a5">
 <p>
 In 2018 I enrolled in graduate studies at the <a href="https://en.wikipedia.org/wiki/University_of_British_Columbia">University of British Columbia</a> (UBC). There, my interests in mathematical and philosophical logic flourished, and my approach to cognition became more formal. Under the supervision of <a href="https://orisimchen.net/">Ori Simchen</a>, I undertook research with intent to reconcile Wilfrid Sellars' approach to meaning and representation with influential arguments from <a href="https://en.wikipedia.org/wiki/Hilary_Putnam">Hilary Putnam</a>. After tracing the arc of Putnam's views on representation, I concluded that Sellars had diverged from a tradition in philosophical logic which supports <a href="https://plato.stanford.edu/entries/realism-sem-challenge/model-theory-completeness.html">model-theoretic challenges</a> to Realism, too far "upstream" from Putnam for me to put them in fruitful conversation. So, in <a href="https://open.library.ubc.ca/media/stream/pdf/24/1.0395793/4">my M.A. thesis</a> I instead attempted to elaborate on the point of divergence &#x2013; Sellars' take on <a href="https://en.wikipedia.org/wiki/Predication_(philosophy)">predication</a> &#x2013; tracing its historical roots in Wittgenstein's <a href="https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus"><i>Tractatus</i></a>, and implications of differences from a traditional picture I somewhat misleadingly called the <a href="https://plato.stanford.edu/entries/frege/">Frege</a>-<a href="https://plato.stanford.edu/entries/tarski/">Tarski</a> model.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org7f0c4a7" class="outline-4">
-<h4 id="org7f0c4a7">Bachelor of Computer Science</h4>
-<div class="outline-text-4" id="text-org7f0c4a7">
+<div id="outline-container-org147b129" class="outline-4">
+<h4 id="org147b129">Bachelor of Computer Science</h4>
+<div class="outline-text-4" id="text-org147b129">
 <p>
 Toward the end of my master's program, we collectively responded to <a href="https://en.wikipedia.org/wiki/COVID-19">COVID-19</a>. In the wake of that, I forwent a Ph.D. in philosophy in favor of turning my programming hobby into a career. As noted above, my interests in mathematical logic had developed, and I found myself increasingly interested in the theory of computation. The decisive factor was a recommendation for UBC's unique <a href="https://www.cs.ubc.ca/students/undergrad/degree-programs/bcs-program-second-degree">BCS Program</a>, which offers holders of a prior degree a streamlined path to an undergraduate degree in computer science without skimping on content. I enrolled in this program in 2021, and with a one-year internship in the middle, followed by a year of working while studying, finished the program in the summer of 2024.
 </p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org753c8c9" class="outline-2">
-<h2 id="org753c8c9">Interests</h2>
-<div class="outline-text-2" id="text-org753c8c9">
+<div id="outline-container-org1f87fdf" class="outline-2">
+<h2 id="org1f87fdf">Interests</h2>
+<div class="outline-text-2" id="text-org1f87fdf">
 </div>
-<div id="outline-container-orgebb32ea" class="outline-4">
-<h4 id="orgebb32ea">Philosophy</h4>
-<div class="outline-text-4" id="text-orgebb32ea">
+<div id="outline-container-orge47ea39" class="outline-4">
+<h4 id="orge47ea39">Philosophy</h4>
+<div class="outline-text-4" id="text-orge47ea39">
 <p>
 The opening of Sellars' <a href="https://www.stephanieruphy.com/wp-content/uploads/2018/09/SellarsPhilSciImage.pdf"><i>Philosophy and the Scientific Image of Man</i></a> reads:
 </p>
@@ -866,10 +993,9 @@ I understand philosophy and this aim reciprocally: philosophy is the pursuit of 
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc657cc4" class="outline-4">
-<h4 id="orgc657cc4">Non-classical logics</h4>
-<div class="outline-text-4" id="text-orgc657cc4">
+<div id="outline-container-org797ad9c" class="outline-4">
+<h4 id="org797ad9c">Non-classical logics</h4>
+<div class="outline-text-4" id="text-org797ad9c">
 <p>
 The history of so-called <a href="https://en.wikipedia.org/wiki/Non-classical_logic">"non-classical" logics</a> is usually traced to <a href="https://en.wikipedia.org/wiki/C._I._Lewis">C.I. Lewis</a>'s formalization of "strict" implication in response to the use of "material" implication in <a href="https://en.wikipedia.org/wiki/Principia_Mathematica"><i>Principia Mathematica</i></a>. History aside, I share Lewis's commitment to a <a href="https://www.informationphilosopher.com/knowledge/philosophers/lewis/Pragmatic_a_priori.html">pragmatic conception of <i>a priori</i> knowledge</a>, esp. of "laws of logic":
 </p>
@@ -883,42 +1009,38 @@ So, I am interested in non-classical logics, as legitimately alternative systems
 </p>
 </div>
 </div>
-
-<div id="outline-container-org79b7736" class="outline-4">
-<h4 id="org79b7736">Programming language theory</h4>
-<div class="outline-text-4" id="text-org79b7736">
+<div id="outline-container-orge75f3e2" class="outline-4">
+<h4 id="orge75f3e2">Programming language theory</h4>
+<div class="outline-text-4" id="text-orge75f3e2">
 <p>
 There is a straightforward connection between the interest in mathematical logic and an interest in programming language theory, namely the <a href="https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence">Curry-Howard Isomorphism</a>. I think <a href="https://en.wikipedia.org/wiki/Continuation">continuations</a>, specifically, are among the most fascinating beasts in the computational zoo, and the correspondence between first-class continuation handling and a double-negation embedding of classical logic in intuitionistic logic was a wild discovery (see <a href="https://www.cl.cam.ac.uk/~tgg22/publications/popl90.pdf">this</a>). Another particularly interesting sort of beast is the <i>reflective tower of interpreters</i> &#x2013; sure to make any programmer go "whoa". These are neatly illustrated by Nada Amin in this <a href="https://www.youtube.com/watch?v=SrKj4hYic5A">talk</a>, and their collapse covered in this <a href="https://www.cs.purdue.edu/homes/rompf/papers/amin-popl18.pdf">paper</a>. I hope to one day fully wrap my head around them.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgee46c7e" class="outline-4">
-<h4 id="orgee46c7e">(Mostly "Good ol' fashioned") A.I.</h4>
-<div class="outline-text-4" id="text-orgee46c7e">
+<div id="outline-container-org62cc559" class="outline-4">
+<h4 id="org62cc559">(Mostly "Good ol' fashioned") A.I.</h4>
+<div class="outline-text-4" id="text-org62cc559">
 <p>
 I am interested in A.I. for various reasons, but mostly in combinatorial search problems, due in part to the sheer fun of solving them, and in part to arcane philsophical reflections (<a href="https://link.springer.com/article/10.1007/bf00353791"><i>Tractarian</i></a> themes in Sellars). Much of the GOFAI program was "problem solving as search", and though it has fallen out of favor, I'm holding out hope for a resurgence. However I am cognisant of issues with regarding this as a path to better understanding ourselves, <i>cf.</i> Hubert Dreyfus' famous <a href="https://archive.org/details/whatcomputerscan00hube">critiques</a> of the GOFAI program. 
 </p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-orge33b139" class="outline-2">
-<h2 id="orge33b139">Recreation</h2>
-<div class="outline-text-2" id="text-orge33b139">
+<div id="outline-container-org13968e7" class="outline-2">
+<h2 id="org13968e7">Recreation</h2>
+<div class="outline-text-2" id="text-org13968e7">
 </div>
-<div id="outline-container-org9247af8" class="outline-4">
-<h4 id="org9247af8">Snowboarding</h4>
-<div class="outline-text-4" id="text-org9247af8">
+<div id="outline-container-org19834aa" class="outline-4">
+<h4 id="org19834aa">Snowboarding</h4>
+<div class="outline-text-4" id="text-org19834aa">
 <p>
 I'm a long-time fan of "board sports". I grew up skateboarding, was vice president of the ULSU Board, Ski and Surf Club in my early twenties, and continue to snowboard regularly today. I cut my teeth in the Alberta Rockies, mostly on the lesser-known but very steep <a href="https://www.skicastle.ca/">Castle Mountain</a>, and occasionally on the better-known <a href="https://www.skilouise.com">Lake Louise.</a> Since moving to Vancouver, I've held a yearly pass at <a href="https://www.whistlerblackcomb.com/">Whistler-Blackcomb</a> and try to make it out at least once a week when the lifts are running.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org03b6418" class="outline-4">
-<h4 id="org03b6418">Boxing</h4>
-<div class="outline-text-4" id="text-org03b6418">
+<div id="outline-container-orgd5154bd" class="outline-4">
+<h4 id="orgd5154bd">Boxing</h4>
+<div class="outline-text-4" id="text-orgd5154bd">
 <p>
 I spend most evenings training at a local non-profit <a href="https://www.eastsideboxingclub.com/">boxing gym</a> serving Vancouver's Downtown Eastside. What I enjoy most about boxing is the (somewhat ironically) cerebral nature of the sport. Despite the reputation, it is a game of strategy in many ways like chess, as witnessed in the combined sport <a href="https://en.wikipedia.org/wiki/Chess_boxing">chess boxing</a>. Nonetheless, it is a risky game, and while I don't mind some tag sparring, I don't fight competitively &#x2013; I like my brain too much.
 </p>
@@ -1219,6 +1341,10 @@ if ((header || footer)) {
   }
 }
 
+if (options.hasOwnProperty('src-lang') && options['src-lang'] == 't') {
+  let labels = [...document.querySelectorAll('.srcLangLabel')];
+  labels.forEach(l => l.style.display = 'inline-block');
+}
 
 if (options.hasOwnProperty('collapsing') && options.collapsing == 't') {
   let levels = [2, 3, 4, 5, 6];
