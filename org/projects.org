@@ -78,7 +78,7 @@ Then we can define addition, recursively, by application of the Y combinator to 
 
 #+BEGIN_SRC racket
 (define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))
-(define plus `(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,next m)))))))
+(define plus `(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,succ m)))))))
 (define add-direct `(,Y ,plus))
 #+END_SRC
 
@@ -86,7 +86,7 @@ Alternatively, we can define addition by applying a /staged/ fixpoint to the /co
 
 #+BEGIN_SRC racket
 (define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))
-(define splus `(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,next m)))))))
+(define splus `(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,succ m)))))))
 (define add-staged `(,sfix (□ ,splus)))
 #+END_SRC
 
