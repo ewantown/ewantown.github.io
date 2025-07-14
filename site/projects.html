@@ -869,6 +869,38 @@ margin-right: calc(0 * 0.22em);
 }
 /*]]>*/-->
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -907,6 +939,7 @@ Thoughts</a>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#org0e5f0b9">nice-org-html</a></li>
+<li><a href="#org678d946">M-&lambda;</a></li>
 <li><a href="#org1885f40">Guiser</a></li>
 <li><a href="#org0f46220">search-factory</a></li>
 <li><a href="#org98abe61">LifeInteractive</a></li>
@@ -921,11 +954,11 @@ This is an Emacs package (available on <a href="https://melpa.org/#/nice-org-htm
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>EMACS-LISP</span><button class='copyBtn' name=btn_5fefca79391e4a788db8aec9d8f9cd8a>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>EMACS-LISP</span><button class='copyBtn' name=btn_0da3b73d2f8540288faa99423a811ec1>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_5fefca79391e4a788db8aec9d8f9cd8a=document.querySelector('button[name=btn_5fefca79391e4a788db8aec9d8f9cd8a]');
-copyBtnbtn_5fefca79391e4a788db8aec9d8f9cd8a.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`(nice-org-html-publishing-function\n :theme-alist\n ((dark . spacemacs-dark) (light . spacemacs-light))\n :default-mode dark\n :headline-bullets (:h1 \"\" :h2 \"\" :h3 \"▷\" :h4 \"\" :h5 \"\")\n :header\n ((\"Ewan Townshend\" . \"home\")\n  (\"About\" . \"about\")\n  (\"Projects\" . \"projects\")\n  (\"Thoughts\" . \"thoughts\"))\n :footer\n ((\"© 2025\" . nil)				\n  (\"LinkedIn\" . \"https://www.linkedin.com/in/ewan-townshend\")\n  (\"GitHub\" . \"https://github.com/ewantown\")\n  (\"Resumé\" . \"other/sw-resume.pdf\")\n  (\"Email\" . \"mailto:ewan@etown.dev\")))\n`);copyBtnbtn_5fefca79391e4a788db8aec9d8f9cd8a.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_5fefca79391e4a788db8aec9d8f9cd8a.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_0da3b73d2f8540288faa99423a811ec1=document.querySelector('button[name=btn_0da3b73d2f8540288faa99423a811ec1]');
+copyBtnbtn_0da3b73d2f8540288faa99423a811ec1.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(nice-org-html-publishing-function\n :theme-alist\n ((dark . spacemacs-dark) (light . spacemacs-light))\n :default-mode dark\n :headline-bullets (:h1 \"\" :h2 \"\" :h3 \"▷\" :h4 \"\" :h5 \"\")\n :header\n ((\"Ewan Townshend\" . \"home\")\n  (\"About\" . \"about\")\n  (\"Projects\" . \"projects\")\n  (\"Thoughts\" . \"thoughts\"))\n :footer\n ((\"© 2025\" . nil)				\n  (\"LinkedIn\" . \"https://www.linkedin.com/in/ewan-townshend\")\n  (\"GitHub\" . \"https://github.com/ewantown\")\n  (\"Resumé\" . \"other/sw-resume.pdf\")\n  (\"Email\" . \"mailto:ewan@etown.dev\")))\n`);copyBtnbtn_0da3b73d2f8540288faa99423a811ec1.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_0da3b73d2f8540288faa99423a811ec1.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -947,6 +980,181 @@ let res = copyTextToClipboard(`(nice-org-html-publishing-function\n :theme-alist
   (<span style="color: var(--clr-string); background-color: var(--bg-string);">"Email"</span> . <span style="color: var(--clr-string); background-color: var(--bg-string);">"mailto:ewan@etown.dev"</span>)))
 </pre>
 </div></div>
+</div>
+</div>
+<div id="outline-container-org678d946" class="outline-2">
+<h2 id="org678d946"><a href="https://github.com/ewantown/mlambda">M-&lambda;</a></h2>
+<div class="outline-text-2" id="text-org678d946">
+<p>
+This is a programming language implemented in Racket. Specifically, a reflective untyped lambda calculus with call-by-name semantics and first class continuations, which makes apparent some connections between modal logics, metaprogramming, recursion theory, and continuation handling constructs.
+</p>
+
+<p>
+The core of the project is a pattern matching interpreter, which makes evaluation order independent of the metalanguage (Racket) by passing and reducing a defunctionalized continuation. The value of the language is theoretical, not practical. It's syntax and semantics are as follows:
+</p>
+
+<div class='org-src-wrapper'>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_f08dcb7a773f4b4ea267749557c066db>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_f08dcb7a773f4b4ea267749557c066db=document.querySelector('button[name=btn_f08dcb7a773f4b4ea267749557c066db]');
+copyBtnbtn_f08dcb7a773f4b4ea267749557c066db.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`<sym>   ≡ x: (symbol? x)       \n<wff> ::= (→ <sym> <wff>)      := abstraction\n        | (<wff> <wff>)        := application\n        | (□ <wff>)            := quotation\n        | (▷ <wff> <wff>)      := quote combination (the \"Kleene\" operator)\n        | (ε <wff>)            := evaluation\n        | (ρ <wff>)            := \"reset\" (continuation delimiter)\n        | (σ <wff>)            := \"shift\" (introduces delimited continuation)\n        | (callcc <wff>)       := \"control\" (introduces global continuation)\n        | (dropcc <wff>)       := \"abort\"   (eliminates global continuation)\n`);copyBtnbtn_f08dcb7a773f4b4ea267749557c066db.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_f08dcb7a773f4b4ea267749557c066db.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div><div class="org-src-container">
+<pre class="src src-racket">&lt;sym&gt;   ≡ x: (symbol? x)       
+&lt;wff&gt; ::= (→ &lt;sym&gt; &lt;wff&gt;)      := abstraction
+        | (&lt;wff&gt; &lt;wff&gt;)        := application
+        | (□ &lt;wff&gt;)            := quotation
+        | (▷ &lt;wff&gt; &lt;wff&gt;)      := quote combination (the "Kleene" operator)
+        | (ε &lt;wff&gt;)            := evaluation
+        | (ρ &lt;wff&gt;)            := "reset" (continuation delimiter)
+        | (σ &lt;wff&gt;)            := "shift" (introduces delimited continuation)
+        | (callcc &lt;wff&gt;)       := "control" (introduces global continuation)
+        | (dropcc &lt;wff&gt;)       := "abort"   (eliminates global continuation)
+</pre>
+</div></div>
+
+<p>
+The syntax was chosen to reflect an extended Curry-Howard correspondence between modal logic S4 and <i>reflective</i> lamba calculi, with quotation, evaluation, and the Kleene operator giving rise to "code combinators". That correspondence is roughly summarized below:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Code Combinator</th>
+<th scope="col" class="org-left">Modal Formula</th>
+<th scope="col" class="org-left">Axiom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>(→ x (→ y (▷ x y)))</code></td>
+<td class="org-left">\(□(A → B) → (□A → □B)\)</td>
+<td class="org-left"><b>K</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(→ x (ε x))</code></td>
+<td class="org-left">\(□A → A\)</td>
+<td class="org-left"><b>T</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(→ x (□ x))</code></td>
+<td class="org-left">\(□A → □□A\)</td>
+<td class="org-left"><b>4</b></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Some interesting points arise in considering the language.
+</p>
+
+<p>
+One is that we can derive an infinite hierarchy of staged Quines, with the base of the hierarchy being:
+</p>
+
+<div class='org-src-wrapper'>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_d6490b2f998b45bfb5ac8163097bbadf>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_d6490b2f998b45bfb5ac8163097bbadf=document.querySelector('button[name=btn_d6490b2f998b45bfb5ac8163097bbadf]');
+copyBtnbtn_d6490b2f998b45bfb5ac8163097bbadf.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`'(□ ((→ x (▷ x (□ x))) (□ (→ x (▷ x (□ x))))))\n`);copyBtnbtn_d6490b2f998b45bfb5ac8163097bbadf.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_d6490b2f998b45bfb5ac8163097bbadf.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div><div class="org-src-container">
+<pre class="src src-racket">'(□ ((→ x (▷ x (□ x))) (□ (→ x (▷ x (□ x))))))
+</pre>
+</div></div>
+
+<p>
+Another is that we have two possible routes into recursive computations. This can be demonstrated as follows. First, we define basic arithmetic values with a familiar Church encoding:
+</p>
+
+<div class='org-src-wrapper'>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_87ee1f5da67c4847a39059fa7f5dc6e2>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_87ee1f5da67c4847a39059fa7f5dc6e2=document.querySelector('button[name=btn_87ee1f5da67c4847a39059fa7f5dc6e2]');
+copyBtnbtn_87ee1f5da67c4847a39059fa7f5dc6e2.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define zero '(→ f (→ x x)))\n(define succ '(→ n (→ f (→ x (f ((n f) x))))))  \n`);copyBtnbtn_87ee1f5da67c4847a39059fa7f5dc6e2.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_87ee1f5da67c4847a39059fa7f5dc6e2.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div><div class="org-src-container">
+<pre class="src src-racket">(define zero '(→ f (→ x x)))
+(define succ '(→ n (→ f (→ x (f ((n f) x))))))  
+</pre>
+</div></div>
+
+<p>
+and a basic branching operator:
+</p>
+
+<div class='org-src-wrapper'>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_36b28e2d49bf4a40875819296835a369>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_36b28e2d49bf4a40875819296835a369=document.querySelector('button[name=btn_36b28e2d49bf4a40875819296835a369]');
+copyBtnbtn_36b28e2d49bf4a40875819296835a369.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define iszero '(→ f ((f (→ z (→ x (→ y y)))) (→ x (→ y x)))))\n(define ifzero \`((→ p (→ a (→ b ((p a) b)))) ,iszero))  \n`);copyBtnbtn_36b28e2d49bf4a40875819296835a369.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_36b28e2d49bf4a40875819296835a369.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div><div class="org-src-container">
+<pre class="src src-racket">(define iszero '(→ f ((f (→ z (→ x (→ y y)))) (→ x (→ y x)))))
+(define ifzero `((→ p (→ a (→ b ((p a) b)))) ,iszero))  
+</pre>
+</div></div>
+
+<p>
+Then we can define addition, recursively, by application of the Y combinator to a function over the numerals:
+</p>
+
+<div class='org-src-wrapper'>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_ff155119434549ddba587dea929edf3e>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_ff155119434549ddba587dea929edf3e=document.querySelector('button[name=btn_ff155119434549ddba587dea929edf3e]');
+copyBtnbtn_ff155119434549ddba587dea929edf3e.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))\n(define plus \`(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,next m)))))))\n(define add-direct \`(,Y ,plus))\n`);copyBtnbtn_ff155119434549ddba587dea929edf3e.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_ff155119434549ddba587dea929edf3e.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div><div class="org-src-container">
+<pre class="src src-racket">(define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))
+(define plus `(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,next m)))))))
+(define add-direct `(,Y ,plus))
+</pre>
+</div></div>
+
+<p>
+Alternatively, we can define addition by applying a <i>staged</i> fixpoint to the <i>code</i> of a function over <i>expressions</i>:
+</p>
+
+<div class='org-src-wrapper'>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_a1c1232e763d45419b95cab501f32bab>&#10697;</button>
+<script type='text/javascript'>
+var copyBtnbtn_a1c1232e763d45419b95cab501f32bab=document.querySelector('button[name=btn_a1c1232e763d45419b95cab501f32bab]');
+copyBtnbtn_a1c1232e763d45419b95cab501f32bab.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))\n(define splus \`(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,next m)))))))\n(define add-staged \`(,sfix (□ ,splus)))  \n`);copyBtnbtn_a1c1232e763d45419b95cab501f32bab.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_a1c1232e763d45419b95cab501f32bab.innerHTML = '&#10697;'}, 3000);
+});
+</script>
+</div><div class="org-src-container">
+<pre class="src src-racket">(define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))
+(define splus `(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,next m)))))))
+(define add-staged `(,sfix (□ ,splus)))  
+</pre>
+</div></div>
+
+<p>
+For some of the theoretical backdrop to this project, see <a href="https://okmij.org/ftp/Computation/Kleene.pdf"><i>Kleene Second Recursion Theorem: A Functional Pearl</i></a> (Anonymous, 2018, in Proceedings of the ACM).
+</p>
 </div>
 </div>
 <div id="outline-container-org1885f40" class="outline-2">

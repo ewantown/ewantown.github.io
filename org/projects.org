@@ -17,12 +17,80 @@ This is an Emacs package (available on [[https://melpa.org/#/nice-org-html][Melp
     ("Projects" . "projects")
     ("Thoughts" . "thoughts"))
    :footer
-   (("© 2025" . nil)				
+   (("© 2025" . nil)
     ("LinkedIn" . "https://www.linkedin.com/in/ewan-townshend")
     ("GitHub" . "https://github.com/ewantown")
     ("Resumé" . "other/sw-resume.pdf")
     ("Email" . "mailto:ewan@etown.dev")))
 #+end_src
+
+* [[https://github.com/ewantown/mlambda][M-\lambda]]
+This is a programming language implemented in Racket. Specifically, a reflective untyped lambda calculus with call-by-name semantics and first class continuations, which makes apparent some connections between modal logics, metaprogramming, recursion theory, and continuation handling constructs.
+
+The core of the project is a pattern matching interpreter, which makes evaluation order independent of the metalanguage (Racket) by passing and reducing a defunctionalized continuation. The value of the language is theoretical, not practical. It's syntax and semantics are as follows:
+
+#+BEGIN_SRC racket
+<sym>   ≡ x: (symbol? x)
+<wff> ::= (→ <sym> <wff>)      := abstraction
+        | (<wff> <wff>)        := application
+        | (□ <wff>)            := quotation
+        | (▷ <wff> <wff>)      := quote combination (the "Kleene" operator)
+        | (ε <wff>)            := evaluation
+        | (ρ <wff>)            := "reset" (continuation delimiter)
+        | (σ <wff>)            := "shift" (introduces delimited continuation)
+        | (callcc <wff>)       := "control" (introduces global continuation)
+        | (dropcc <wff>)       := "abort"   (eliminates global continuation)
+#+END_SRC
+
+The syntax was chosen to reflect an extended Curry-Howard correspondence between modal logic S4 and /reflective/ lamba calculi, with quotation, evaluation, and the Kleene operator giving rise to "code combinators". That correspondence is roughly summarized below:
+
+|-----------------------+------------------------+-------|
+| Code Combinator       | Modal Formula          | Axiom |
+|-----------------------+------------------------+-------|
+| ~(→ x (→ y (▷ x y)))~ | $□(A → B) → (□A → □B)$ | *K*   |
+| ~(→ x (ε x))~         | $□A → A$               | *T*   |
+| ~(→ x (□ x))~         | $□A → □□A$             | *4*   |
+|-----------------------+------------------------+-------|
+
+Some interesting points arise in considering the language.
+
+One is that we can derive an infinite hierarchy of staged Quines, with the base of the hierarchy being:
+
+#+BEGIN_SRC racket
+  '(□ ((→ x (▷ x (□ x))) (□ (→ x (▷ x (□ x))))))
+#+END_SRC
+
+Another is that we have two possible routes into recursive computations. This can be demonstrated as follows. First, we define basic arithmetic values with a familiar Church encoding:
+
+#+BEGIN_SRC racket
+(define zero '(→ f (→ x x)))
+(define succ '(→ n (→ f (→ x (f ((n f) x))))))
+#+END_SRC
+
+and a basic branching operator:
+
+#+BEGIN_SRC racket
+(define iszero '(→ f ((f (→ z (→ x (→ y y)))) (→ x (→ y x)))))
+(define ifzero `((→ p (→ a (→ b ((p a) b)))) ,iszero))
+#+END_SRC
+
+Then we can define addition, recursively, by application of the Y combinator to a function over the numerals:
+
+#+BEGIN_SRC racket
+(define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))
+(define plus `(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,next m)))))))
+(define add-direct `(,Y ,plus))
+#+END_SRC
+
+Alternatively, we can define addition by applying a /staged/ fixpoint to the /code/ of a function over /expressions/:
+
+#+BEGIN_SRC racket
+(define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))
+(define splus `(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,next m)))))))
+(define add-staged `(,sfix (□ ,splus)))
+#+END_SRC
+
+For some of the theoretical backdrop to this project, see [[https://okmij.org/ftp/Computation/Kleene.pdf][/Kleene Second Recursion Theorem: A Functional Pearl/]] (Anonymous, 2018, in Proceedings of the ACM).
 
 * [[https://github.com/ewantown/guiser][Guiser]]
 This is a web application enabling users to design multiple “personas”, and generate and post social media content under the guise of a persona to associated accounts on major social media platforms (LinkedIn, Twitter / X, and Threads). The intent of Guiser was three-fold. On one hand, it is a useful tool for social media marketing, enabling a single marketing professional to masquerade as numerous “organic” content creators. On the other hand, its creation was a prescient commentary on the direction of social media in the wake of programmatically accessible large language models. Finally, as a project, it provided an opportunity to work with technologies that comprise the “backbone” of modern web applications with increasing frequency. In this regard, the application was written in JavaScript and TypeScript, uses the MERN stack, and has four OAuth integrations (Google, LinkedIn, Meta, Twitter/X), five external REST API integrations (LinkedIn, Meta, Twitter/X, MongoDB Atlas), and one internal REST API to handle client-server transactions.
