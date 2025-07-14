@@ -56,27 +56,27 @@ Some interesting points arise in considering the language.
 
 One is that we can derive an infinite hierarchy of staged Quines, with the base of the hierarchy being:
 
-#+BEGIN_SRC racket
+#+BEGIN_SRC scheme
   '(□ ((→ x (▷ x (□ x))) (□ (→ x (▷ x (□ x))))))
 #+END_SRC
 
 Another is that we have two possible routes into recursive computations. This can be demonstrated as follows. First, we define basic arithmetic values with a familiar Church encoding:
 
-#+BEGIN_SRC racket
+#+BEGIN_SRC scheme
 (define zero '(→ f (→ x x)))
 (define succ '(→ n (→ f (→ x (f ((n f) x))))))
 #+END_SRC
 
 and a basic branching operator:
 
-#+BEGIN_SRC racket
+#+BEGIN_SRC scheme
 (define iszero '(→ f ((f (→ z (→ x (→ y y)))) (→ x (→ y x)))))
 (define ifzero `((→ p (→ a (→ b ((p a) b)))) ,iszero))
 #+END_SRC
 
 Then we can define addition, recursively, by application of the Y combinator to a function over the numerals:
 
-#+BEGIN_SRC racket
+#+BEGIN_SRC scheme
 (define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))
 (define plus `(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,succ m)))))))
 (define add-direct `(,Y ,plus))
@@ -84,7 +84,7 @@ Then we can define addition, recursively, by application of the Y combinator to 
 
 Alternatively, we can define addition by applying a /staged/ fixpoint to the /code/ of a function over /expressions/:
 
-#+BEGIN_SRC racket
+#+BEGIN_SRC scheme
 (define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))
 (define splus `(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,succ m)))))))
 (define add-staged `(,sfix (□ ,splus)))
