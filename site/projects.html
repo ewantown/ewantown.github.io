@@ -840,11 +840,11 @@ The core of the project is a pattern matching interpreter, which makes evaluatio
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_f7dbe21ddc3149cea836dbf7032d9825>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>RACKET</span><button class='copyBtn' name=btn_15d24b9324434516b94180c12d6e941a>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_f7dbe21ddc3149cea836dbf7032d9825=document.querySelector('button[name=btn_f7dbe21ddc3149cea836dbf7032d9825]');
-copyBtnbtn_f7dbe21ddc3149cea836dbf7032d9825.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`<sym>   ≡ x: (symbol? x)\n<wff> ::= (→ <sym> <wff>)      := abstraction\n        | (<wff> <wff>)        := application\n        | (□ <wff>)            := quotation\n        | (▷ <wff> <wff>)      := quote combination (the \"Kleene\" operator)\n        | (ε <wff>)            := evaluation\n        | (ρ <wff>)            := \"reset\" (continuation delimiter)\n        | (σ <wff>)            := \"shift\" (introduces delimited continuation)\n        | (callcc <wff>)       := \"control\" (introduces global continuation)\n        | (dropcc <wff>)       := \"abort\"   (eliminates global continuation)\n`);copyBtnbtn_f7dbe21ddc3149cea836dbf7032d9825.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_f7dbe21ddc3149cea836dbf7032d9825.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_15d24b9324434516b94180c12d6e941a=document.querySelector('button[name=btn_15d24b9324434516b94180c12d6e941a]');
+copyBtnbtn_15d24b9324434516b94180c12d6e941a.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`<sym>   ≡ x: (symbol? x)\n<wff> ::= (→ <sym> <wff>)      := abstraction\n        | (<wff> <wff>)        := application\n        | (□ <wff>)            := quotation\n        | (▷ <wff> <wff>)      := quote combination (the \"Kleene\" operator)\n        | (ε <wff>)            := evaluation\n        | (ρ <wff>)            := \"reset\" (continuation delimiter)\n        | (σ <wff>)            := \"shift\" (introduces delimited continuation)\n        | (callcc <wff>)       := \"control\" (introduces global continuation)\n        | (dropcc <wff>)       := \"abort\"   (eliminates global continuation)\n`);copyBtnbtn_15d24b9324434516b94180c12d6e941a.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_15d24b9324434516b94180c12d6e941a.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -912,11 +912,11 @@ One is that we can derive an infinite hierarchy of staged Quines, with the base 
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_42c7d50b69d5461d83b387a21f655590>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_d3d1d9af93f2471c99fe19fdfc9d5350>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_42c7d50b69d5461d83b387a21f655590=document.querySelector('button[name=btn_42c7d50b69d5461d83b387a21f655590]');
-copyBtnbtn_42c7d50b69d5461d83b387a21f655590.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`'(□ ((→ x (▷ x (□ x))) (□ (→ x (▷ x (□ x))))))\n`);copyBtnbtn_42c7d50b69d5461d83b387a21f655590.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_42c7d50b69d5461d83b387a21f655590.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_d3d1d9af93f2471c99fe19fdfc9d5350=document.querySelector('button[name=btn_d3d1d9af93f2471c99fe19fdfc9d5350]');
+copyBtnbtn_d3d1d9af93f2471c99fe19fdfc9d5350.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`'(□ ((→ x (▷ x (□ x))) (□ (→ x (▷ x (□ x))))))\n`);copyBtnbtn_d3d1d9af93f2471c99fe19fdfc9d5350.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_d3d1d9af93f2471c99fe19fdfc9d5350.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -929,11 +929,11 @@ Another is that we have two possible routes into recursive computations. This ca
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_27c8c249a44141dea1e1bd8839b1bb62>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_64c667e51bdb449b8f7b065cacc392c8>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_27c8c249a44141dea1e1bd8839b1bb62=document.querySelector('button[name=btn_27c8c249a44141dea1e1bd8839b1bb62]');
-copyBtnbtn_27c8c249a44141dea1e1bd8839b1bb62.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`(define zero '(→ f (→ x x)))\n(define succ '(→ n (→ f (→ x (f ((n f) x))))))\n`);copyBtnbtn_27c8c249a44141dea1e1bd8839b1bb62.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_27c8c249a44141dea1e1bd8839b1bb62.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_64c667e51bdb449b8f7b065cacc392c8=document.querySelector('button[name=btn_64c667e51bdb449b8f7b065cacc392c8]');
+copyBtnbtn_64c667e51bdb449b8f7b065cacc392c8.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define zero '(→ f (→ x x)))\n(define succ '(→ n (→ f (→ x (f ((n f) x))))))\n`);copyBtnbtn_64c667e51bdb449b8f7b065cacc392c8.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_64c667e51bdb449b8f7b065cacc392c8.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -947,11 +947,11 @@ and a basic branching operator:
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_e1361e56f6b64f22b8d0543ef5fd939c>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_ae66da9177bc4724b868ad38d61ec168>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_e1361e56f6b64f22b8d0543ef5fd939c=document.querySelector('button[name=btn_e1361e56f6b64f22b8d0543ef5fd939c]');
-copyBtnbtn_e1361e56f6b64f22b8d0543ef5fd939c.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`(define iszero '(→ f ((f (→ z (→ x (→ y y)))) (→ x (→ y x)))))\n(define ifzero \`((→ p (→ a (→ b ((p a) b)))) ,iszero))\n`);copyBtnbtn_e1361e56f6b64f22b8d0543ef5fd939c.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_e1361e56f6b64f22b8d0543ef5fd939c.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_ae66da9177bc4724b868ad38d61ec168=document.querySelector('button[name=btn_ae66da9177bc4724b868ad38d61ec168]');
+copyBtnbtn_ae66da9177bc4724b868ad38d61ec168.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define iszero '(→ f ((f (→ z (→ x (→ y y)))) (→ x (→ y x)))))\n(define ifzero \`((→ p (→ a (→ b ((p a) b)))) ,iszero))\n`);copyBtnbtn_ae66da9177bc4724b868ad38d61ec168.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_ae66da9177bc4724b868ad38d61ec168.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -965,11 +965,11 @@ Then we can define addition, recursively, by application of the Y combinator to 
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_452dd79a7ea04bedb7ec325dc84a1069>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_4633cb8bdbed4b1ca7d75634bf0fb477>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_452dd79a7ea04bedb7ec325dc84a1069=document.querySelector('button[name=btn_452dd79a7ea04bedb7ec325dc84a1069]');
-copyBtnbtn_452dd79a7ea04bedb7ec325dc84a1069.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`(define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))\n(define plus \`(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,succ m)))))))\n(define add-direct \`(,Y ,plus))\n`);copyBtnbtn_452dd79a7ea04bedb7ec325dc84a1069.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_452dd79a7ea04bedb7ec325dc84a1069.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_4633cb8bdbed4b1ca7d75634bf0fb477=document.querySelector('button[name=btn_4633cb8bdbed4b1ca7d75634bf0fb477]');
+copyBtnbtn_4633cb8bdbed4b1ca7d75634bf0fb477.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define Y '(→ f ((→ g (f (g g))) (→ g (f (g g))))))\n(define plus \`(→ f (→ n (→ m (((,ifzero n) m) ((f (,prev n)) (,succ m)))))))\n(define add-direct \`(,Y ,plus))\n`);copyBtnbtn_4633cb8bdbed4b1ca7d75634bf0fb477.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_4633cb8bdbed4b1ca7d75634bf0fb477.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -984,11 +984,11 @@ Alternatively, we can define addition by applying a <i>staged</i> fixpoint to th
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_a95cc118efe04c67b0ddc1c0dfe5c8ca>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>SCHEME</span><button class='copyBtn' name=btn_0f31f4ee00e64cf19a3efbe14d4366eb>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_a95cc118efe04c67b0ddc1c0dfe5c8ca=document.querySelector('button[name=btn_a95cc118efe04c67b0ddc1c0dfe5c8ca]');
-copyBtnbtn_a95cc118efe04c67b0ddc1c0dfe5c8ca.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`(define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))\n(define splus \`(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,succ m)))))))\n(define add-staged \`(,sfix (□ ,splus)))\n`);copyBtnbtn_a95cc118efe04c67b0ddc1c0dfe5c8ca.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_a95cc118efe04c67b0ddc1c0dfe5c8ca.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_0f31f4ee00e64cf19a3efbe14d4366eb=document.querySelector('button[name=btn_0f31f4ee00e64cf19a3efbe14d4366eb]');
+copyBtnbtn_0f31f4ee00e64cf19a3efbe14d4366eb.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(define sfix '(→ e ((→ x ((ε x) x)) (▷ (□ (→ t (→ y (t (▷ y (□ y)))))) e))))\n(define splus \`(→ e (→ n (→ m (((,ifzero n) m) (((ε e) (,prev n)) (,succ m)))))))\n(define add-staged \`(,sfix (□ ,splus)))\n`);copyBtnbtn_0f31f4ee00e64cf19a3efbe14d4366eb.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_0f31f4ee00e64cf19a3efbe14d4366eb.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
@@ -1011,11 +1011,11 @@ This is an Emacs package (available on <a href="https://melpa.org/#/nice-org-htm
 </p>
 
 <div class='org-src-wrapper'>
-<div class='org-src-bar'><span class='srcLangLabel'>EMACS-LISP</span><button class='copyBtn' name=btn_8470b7dc4d214399b403ddd4a0431913>&#10697;</button>
+<div class='org-src-bar'><span class='srcLangLabel'>EMACS-LISP</span><button class='copyBtn' name=btn_e970d0f622f34efbbfa474bb88860c7d>&#10697;</button>
 <script type='text/javascript'>
-var copyBtnbtn_8470b7dc4d214399b403ddd4a0431913=document.querySelector('button[name=btn_8470b7dc4d214399b403ddd4a0431913]');
-copyBtnbtn_8470b7dc4d214399b403ddd4a0431913.addEventListener('click', function(event) {
-let res = copyTextToClipboard(`(nice-org-html-publishing-function\n :theme-alist\n ((dark . spacemacs-dark) (light . spacemacs-light))\n :default-mode dark\n :headline-bullets (:h1 \"\" :h2 \"\" :h3 \"▷\" :h4 \"\" :h5 \"\")\n :header\n ((\"Ewan Townshend\" . \"home\")\n  (\"About\" . \"about\")\n  (\"Projects\" . \"projects\")\n  (\"Thoughts\" . \"thoughts\"))\n :footer\n ((\"© 2025\" . nil)\n  (\"LinkedIn\" . \"https://www.linkedin.com/in/ewan-townshend\")\n  (\"GitHub\" . \"https://github.com/ewantown\")\n  (\"Resumé\" . \"other/sw-resume.pdf\")\n  (\"Email\" . \"mailto:ewan@etown.dev\")))\n`);copyBtnbtn_8470b7dc4d214399b403ddd4a0431913.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_8470b7dc4d214399b403ddd4a0431913.innerHTML = '&#10697;'}, 3000);
+var copyBtnbtn_e970d0f622f34efbbfa474bb88860c7d=document.querySelector('button[name=btn_e970d0f622f34efbbfa474bb88860c7d]');
+copyBtnbtn_e970d0f622f34efbbfa474bb88860c7d.addEventListener('click', function(event) {
+let res = copyTextToClipboard(`(nice-org-html-publishing-function\n :theme-alist\n ((dark . spacemacs-dark) (light . spacemacs-light))\n :default-mode dark\n :headline-bullets (:h1 \"\" :h2 \"\" :h3 \"▷\" :h4 \"\" :h5 \"\")\n :header\n ((\"Ewan Townshend\" . \"home\")\n  (\"About\" . \"about\")\n  (\"Projects\" . \"projects\")\n  (\"Thoughts\" . \"thoughts\"))\n :footer\n ((\"© 2025\" . nil)\n  (\"LinkedIn\" . \"https://www.linkedin.com/in/ewan-townshend\")\n  (\"GitHub\" . \"https://github.com/ewantown\")\n  (\"Resumé\" . \"other/sw-resume.pdf\")\n  (\"Email\" . \"mailto:ewan@etown.dev\")))\n`);copyBtnbtn_e970d0f622f34efbbfa474bb88860c7d.innerHTML = res ? '&#10003;' : 'error';setTimeout(() => { copyBtnbtn_e970d0f622f34efbbfa474bb88860c7d.innerHTML = '&#10697;'}, 3000);
 });
 </script>
 </div><div class="org-src-container">
