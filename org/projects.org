@@ -2,28 +2,6 @@
 #+Author: Ewan Townshend
 #+Options: toc:3 num:nil
 
-* [[https://github.com/ewantown/nice-org-html][nice-org-html]]
-This is an Emacs package (available on [[https://melpa.org/#/nice-org-html][Melpa]]) that generates pretty static websites from [[https://orgmode.org/guide/Markup.html][Org Mode markup]] files and user-chosen Emacs themes. Emacs has a built-in mechanism for exporting .org files and publishing projects comprised of linked .org files, but this mechanism generates very basic HTML, with an outdated appearance when rendered in the browser. This package addresses that shortcoming, in part by leveraging the variety of open-source themes available for Emacs, and in part by using schematic s-expressions to complete HTML component templates. The package provides an Org Export backend, a publishing function, and a publishing-function-generating macro, which enable users to customize the look-and-feel of generated web pages by just specifying values for parameters. This package is used, together with the built-in [[https://www.gnu.org/software/emacs/manual/html_node/org/Publishing.html][publisher]], to generate the website you are viewing now. Customization is achieved by a single macro call:
-
-#+begin_src emacs-lisp
-  (nice-org-html-publishing-function
-   :theme-alist
-   ((dark . spacemacs-dark) (light . spacemacs-light))
-   :default-mode dark
-   :headline-bullets (:h1 "" :h2 "" :h3 "▷" :h4 "" :h5 "")
-   :header
-   (("Ewan Townshend" . "home")
-    ("About" . "about")
-    ("Projects" . "projects")
-    ("Thoughts" . "thoughts"))
-   :footer
-   (("© 2025" . nil)
-    ("LinkedIn" . "https://www.linkedin.com/in/ewan-townshend")
-    ("GitHub" . "https://github.com/ewantown")
-    ("Resumé" . "other/sw-resume.pdf")
-    ("Email" . "mailto:ewan@etown.dev")))
-#+end_src
-
 * [[https://github.com/ewantown/mlambda][M-\lambda]]
 This is a programming language implemented in Racket. Specifically, a reflective untyped lambda calculus with call-by-name semantics and first class continuations, which makes apparent some connections between modal logics, metaprogramming, recursion theory, and continuation handling constructs.
 
@@ -91,6 +69,28 @@ Alternatively, we can define addition by applying a /staged/ fixpoint to the /co
 #+END_SRC
 
 For some of the theoretical backdrop to this project, see [[https://okmij.org/ftp/Computation/Kleene.pdf][/Kleene Second Recursion Theorem: A Functional Pearl/]] (Anonymous, 2018, in Proceedings of the ACM).
+
+* [[https://github.com/ewantown/nice-org-html][nice-org-html]]
+This is an Emacs package (available on [[https://melpa.org/#/nice-org-html][Melpa]]) that generates pretty static websites from [[https://orgmode.org/guide/Markup.html][Org Mode markup]] files and user-chosen Emacs themes. Emacs has a built-in mechanism for exporting .org files and publishing projects comprised of linked .org files, but this mechanism generates very basic HTML, with an outdated appearance when rendered in the browser. This package addresses that shortcoming, in part by leveraging the variety of open-source themes available for Emacs, and in part by using schematic s-expressions to complete HTML component templates. The package provides an Org Export backend, a publishing function, and a publishing-function-generating macro, which enable users to customize the look-and-feel of generated web pages by just specifying values for parameters. This package is used, together with the built-in [[https://www.gnu.org/software/emacs/manual/html_node/org/Publishing.html][publisher]], to generate the website you are viewing now. Customization is achieved by a single macro call:
+
+#+begin_src emacs-lisp
+  (nice-org-html-publishing-function
+   :theme-alist
+   ((dark . spacemacs-dark) (light . spacemacs-light))
+   :default-mode dark
+   :headline-bullets (:h1 "" :h2 "" :h3 "▷" :h4 "" :h5 "")
+   :header
+   (("Ewan Townshend" . "home")
+    ("About" . "about")
+    ("Projects" . "projects")
+    ("Thoughts" . "thoughts"))
+   :footer
+   (("© 2025" . nil)
+    ("LinkedIn" . "https://www.linkedin.com/in/ewan-townshend")
+    ("GitHub" . "https://github.com/ewantown")
+    ("Resumé" . "other/sw-resume.pdf")
+    ("Email" . "mailto:ewan@etown.dev")))
+#+end_src
 
 * [[https://github.com/ewantown/guiser][Guiser]]
 This is a web application enabling users to design multiple “personas”, and generate and post social media content under the guise of a persona to associated accounts on major social media platforms (LinkedIn, Twitter / X, and Threads). The intent of Guiser was three-fold. On one hand, it is a useful tool for social media marketing, enabling a single marketing professional to masquerade as numerous “organic” content creators. On the other hand, its creation was a prescient commentary on the direction of social media in the wake of programmatically accessible large language models. Finally, as a project, it provided an opportunity to work with technologies that comprise the “backbone” of modern web applications with increasing frequency. In this regard, the application was written in JavaScript and TypeScript, uses the MERN stack, and has four OAuth integrations (Google, LinkedIn, Meta, Twitter/X), five external REST API integrations (LinkedIn, Meta, Twitter/X, MongoDB Atlas), and one internal REST API to handle client-server transactions.
